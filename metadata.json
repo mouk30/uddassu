@@ -1,0 +1,8 @@
+{
+  "name": "어따써 숯불포차 청주사천점",
+  "description": "청주 사천동 숯불 꼼장어 전문점 어따써 숯불포차. 통통하고 신선한 왕꼼장어, 허겁살, 생소갈비살, 평일점심특선까지 즐기는 프리미엄 숯불구이 전문 포차",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
