@@ -41,10 +41,9 @@ export const Footer: React.FC = () => {
               영업시간 안내
             </h4>
             <div className="space-y-1.5 text-neutral-300">
-              <p>• 화~일: <span className="text-amber-400 font-bold">오전 07:00 ~ 익일 24:00</span></p>
-              <p>• 월요일: 오후 17:00 ~ 익일 24:00</p>
-              <p>• 평일 점심특선: 오전 11:00 ~ 오후 14:00</p>
-              <p className="text-neutral-500 text-[11px]">* 연중무휴 정상 영업</p>
+              <p>• 월~토: <span className="text-amber-400 font-bold">오후 16:00 ~ 밤 24:00 (오후 4시~밤 12시)</span></p>
+              <p>• 일요일: <span className="text-rose-400 font-bold">매주 일요일 정기휴무</span></p>
+              <p className="text-neutral-500 text-[11px]">* 신선한 재료 준비 및 참숯 점화 후 오후 4시 정각 오픈</p>
             </div>
           </div>
 

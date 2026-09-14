@@ -19,10 +19,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenReservation }) => {
   }, []);
 
   const navLinks = [
+    { label: '전체 메뉴판', href: '#menu-board' },
     { label: '브랜드 소개', href: '#about' },
     { label: '대표 메뉴', href: '#menu' },
     { label: '추천 세트', href: '#sets' },
-    { label: '평일 점심특선', href: '#lunch' },
     { label: '맛있게 즐기는 법', href: '#guide' },
     { label: '포토 갤러리', href: '#gallery' },
     { label: '매장 및 오시는길', href: '#location' },

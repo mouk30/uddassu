@@ -6,10 +6,10 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { ChalkboardMenuBoard } from './components/ChalkboardMenuBoard';
 import { AboutSection } from './components/AboutSection';
 import { MenuSection } from './components/MenuSection';
 import { SetMenuSection } from './components/SetMenuSection';
-import { LunchSpecialBanner } from './components/LunchSpecialBanner';
 import { TasteGuide } from './components/TasteGuide';
 import { PhotoGallery } from './components/PhotoGallery';
 import { LocationHours } from './components/LocationHours';
@@ -31,6 +31,9 @@ export default function App() {
         {/* Hero Section with Charcoal Eel Visuals */}
         <Hero onOpenReservation={() => setReservationOpen(true)} />
 
+        {/* Top Store Chalkboard Menu Board (화면 상단 매장 실물 메뉴판) */}
+        <ChalkboardMenuBoard />
+
         {/* Brand Story & 3 Promises */}
         <AboutSection />
 
@@ -39,9 +42,6 @@ export default function App() {
 
         {/* Value 800g Sets & Interactive Order Estimator */}
         <SetMenuSection onOpenReservation={() => setReservationOpen(true)} />
-
-        {/* Weekday Lunch Specials (11:00 ~ 14:00) */}
-        <LunchSpecialBanner />
 
         {/* 200% Delicious Tasting Guide & 3 Seasoning Sauces */}
         <TasteGuide />

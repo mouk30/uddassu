@@ -57,11 +57,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900/80 border border-neutral-800 backdrop-blur-sm">
             <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
-            3~4인 800g 가성비 세트 (51,000원~)
+            3~4인 800g 세트 A·B (65,000원~)
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900/80 border border-neutral-800 backdrop-blur-sm">
             <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
-            평일 점심특선 11:00~14:00 (파불고기 정식)
+            월~토 16:00~24:00 영업 (일요일 정기휴무)
           </span>
         </div>
 

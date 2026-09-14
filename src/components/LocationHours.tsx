@@ -18,38 +18,29 @@ export const LocationHours: React.FC = () => {
     const day = now.getDay(); // 0: Sun, 1: Mon, 2: Tue, ..., 6: Sat
     const hour = now.getHours();
 
-    // Monday: 17:00 ~ 24:00
-    if (day === 1) {
-      if (hour >= 17 && hour < 24) {
-        return {
-          isOpen: true,
-          label: '지금 영업 중',
-          sub: '월요일은 오후 5시부터 밤 12시까지 운영됩니다.',
-          color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
-        };
-      } else {
-        return {
-          isOpen: false,
-          label: '영업 준비 중',
-          sub: '월요일은 오후 5시에 오픈합니다.',
-          color: 'text-amber-400 bg-amber-500/10 border-amber-500/30',
-        };
-      }
+    // Sunday: Regular Holiday (Closed)
+    if (day === 0) {
+      return {
+        isOpen: false,
+        label: '일요일 정기휴무',
+        sub: '매주 일요일은 정기휴무입니다. 월요일 오후 4시에 뵙겠습니다!',
+        color: 'text-rose-400 bg-rose-500/10 border-rose-500/30',
+      };
     }
 
-    // Tuesday ~ Sunday: 07:00 ~ 24:00
-    if (hour >= 7 && hour < 24) {
+    // Monday ~ Saturday: 16:00 ~ 24:00
+    if (hour >= 16 && hour < 24) {
       return {
         isOpen: true,
         label: '지금 영업 중',
-        sub: '오늘 밤 12시까지 운영됩니다. (점심특선 11:00~14:00)',
+        sub: '오늘 밤 12시까지 운영됩니다. 참숯 직화구이를 즐겨보세요!',
         color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
       };
     } else {
       return {
         isOpen: false,
         label: '영업 준비 중',
-        sub: '오전 7시에 활기차게 오픈합니다.',
+        sub: '월~토 오후 4시부터 밤 12시까지 활기차게 오픈합니다.',
         color: 'text-amber-400 bg-amber-500/10 border-amber-500/30',
       };
     }
@@ -83,7 +74,7 @@ export const LocationHours: React.FC = () => {
                   <span className={`px-3 py-1 rounded-full text-xs font-bold border ${storeStatus.color}`}>
                     ● {storeStatus.label}
                   </span>
-                  <span className="text-xs text-neutral-400 font-medium">연중무휴 운영</span>
+                  <span className="text-xs text-neutral-400 font-medium">월~토 16:00 ~ 24:00 (일 휴무)</span>
                 </div>
 
                 <a
@@ -106,21 +97,17 @@ export const LocationHours: React.FC = () => {
 
               <div className="space-y-3 text-xs sm:text-sm">
                 <div className="flex justify-between py-2 border-b border-neutral-800">
-                  <span className="font-semibold text-neutral-300">화요일 ~ 일요일</span>
-                  <span className="text-amber-400 font-bold">오전 07:00 ~ 익일 24:00</span>
+                  <span className="font-semibold text-neutral-300">오픈 시간 (월요일 ~ 토요일)</span>
+                  <span className="text-amber-400 font-bold text-sm sm:text-base">오후 4시 ~ 밤 12시 (16:00 ~ 24:00)</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-neutral-800">
-                  <span className="font-semibold text-neutral-300">월요일</span>
-                  <span className="text-neutral-200">오후 17:00 ~ 익일 24:00</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-neutral-800">
-                  <span className="font-semibold text-neutral-300">평일 점심특선</span>
-                  <span className="text-orange-400 font-bold">오전 11:00 ~ 오후 14:00</span>
+                  <span className="font-semibold text-neutral-300">정기 휴무</span>
+                  <span className="text-rose-400 font-bold text-sm sm:text-base">매주 일요일 휴무</span>
                 </div>
               </div>
 
               <div className="p-3 rounded-xl bg-neutral-900/80 border border-neutral-800 text-[11px] text-neutral-400">
-                * 아침 식사 및 늦은 밤 야식까지 편안하게 이용하실 수 있습니다.
+                * 당일 공수한 신선한 특대형 왕꼼장어와 참숯을 정성껏 준비하여 매일 오후 4시에 문을 엽니다.
               </div>
             </div>
 

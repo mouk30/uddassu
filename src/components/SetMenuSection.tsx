@@ -15,13 +15,13 @@ export const SetMenuSection: React.FC<SetMenuSectionProps> = ({ onOpenReservatio
 
   // Calculate recommended package
   const getRecommendation = () => {
-    let baseSet = SET_MENUS[0]; // 사장님세트
+    let baseSet = SET_MENUS[0]; // 세트 A (꼼장어 + 소갈비살)
     if (flavorPreference === 'eel') {
-      baseSet = SET_MENUS[1]; // 단골세트 (야채꼼장어 중심)
+      baseSet = SET_MENUS[1] || SET_MENUS[0]; // 세트 B (야채꼼장어 + 허겁살)
     } else if (flavorPreference === 'meat') {
-      baseSet = SET_MENUS[2]; // 청년세트 (고기 중심)
+      baseSet = SET_MENUS[0]; // 세트 A (소갈비살 포함)
     } else {
-      baseSet = SET_MENUS[0]; // 사장님세트 (소금구이 + 갈비살)
+      baseSet = SET_MENUS[0]; // 세트 A 기본
     }
 
     let totalPrice = baseSet.price;
