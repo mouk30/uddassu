@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, Phone, Calendar, ArrowDown, Sparkles, CheckCircle2, ShieldCheck, MapPin } from 'lucide-react';
+import { Flame, Phone, Calendar, ArrowDown, Sparkles, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { STORE_INFO } from '../data/restaurantData';
 import { BrandLogo } from './BrandLogo';
 
@@ -55,39 +55,46 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
           사천동 주민과 단골들이 입을 모아 극찬하는 참숯 포차입니다.
         </p>
 
-        {/* Highlight Bullets */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-neutral-300 mb-9">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900/80 border border-neutral-800 backdrop-blur-sm">
-            <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
-            1인분 200g 넉넉한 정량 원칙
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900/80 border border-neutral-800 backdrop-blur-sm">
-            <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
-            3~4인 800g 세트 A·B (65,000원~)
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900/80 border border-neutral-800 backdrop-blur-sm">
-            <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
-            월~토 16:00~24:00 영업 (일요일 정기휴무)
-          </span>
+        {/* 4 Highlight Bullets (2줄 + 2줄 구성) */}
+        <div className="w-full max-w-2xl mx-auto mb-9">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs sm:text-sm text-neutral-200">
+            {/* Row 1 - 1: 1인분 200g 넉넉한 정량 원칙 */}
+            <div className="flex items-center justify-center sm:justify-start gap-2 px-3.5 py-2.5 rounded-xl bg-neutral-900/85 border border-neutral-800/90 backdrop-blur-md shadow-sm hover:border-amber-500/40 transition-colors">
+              <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+              <span className="font-medium">1인분 200g 넉넉한 정량 원칙</span>
+            </div>
+
+            {/* Row 1 - 2: 3 ~ 4인 800g 세트 A·B (65,000원~) */}
+            <div className="flex items-center justify-center sm:justify-start gap-2 px-3.5 py-2.5 rounded-xl bg-neutral-900/85 border border-neutral-800/90 backdrop-blur-md shadow-sm hover:border-amber-500/40 transition-colors">
+              <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+              <span className="font-medium">3 ~ 4인 800g 세트 A·B (65,000원~)</span>
+            </div>
+
+            {/* Row 2 - 1: 월~토 16:00~24:00 영업 (일요일 정기휴무) - 핵심 강조 (금색 글씨체) */}
+            <div className="flex items-center justify-center sm:justify-start gap-2 px-3.5 py-2.5 rounded-xl bg-neutral-900/95 border border-amber-500/40 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.12)] hover:border-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.22)] transition-all">
+              <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+              <span className="font-bold text-amber-300 text-[13px] sm:text-sm tracking-tight">
+                월~토 16:00~24:00 영업 (일요일 정기휴무)
+              </span>
+            </div>
+
+            {/* Row 2 - 2: 충청북도 청주시 청원구 율봉로 11, 1층 - 핵심 강조 (금색 글씨체) */}
+            <div className="flex items-center justify-center sm:justify-start gap-2 px-3.5 py-2.5 rounded-xl bg-neutral-900/95 border border-amber-500/40 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.12)] hover:border-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.22)] transition-all">
+              <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+              <span className="font-bold text-amber-300 text-[13px] sm:text-sm tracking-tight whitespace-nowrap sm:whitespace-normal">
+                {STORE_INFO.address}
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full max-w-2xl mb-12">
-          {/* 오시는길 소개 버튼 */}
-          <a
-            id="hero-directions-cta"
-            href="#location"
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-neutral-900/90 border border-neutral-700 text-white font-semibold text-base transition-all duration-300 shadow-lg hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/15 hover:shadow-[0_0_22px_rgba(245,158,11,0.35)] transform hover:-translate-y-0.5 active:translate-y-0 group"
-          >
-            <MapPin className="w-4 h-4 text-amber-400 group-hover:scale-110 group-hover:text-amber-300 transition-all duration-300" />
-            <span>오시는길 소개</span>
-          </a>
-
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full max-w-md mb-12">
           {/* 오늘 자리 예약 / 단체 문의 */}
           <button
             id="hero-reserve-cta"
             onClick={onOpenReservation}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-400 hover:to-orange-500 text-neutral-950 font-bold text-base shadow-xl shadow-orange-950/40 hover:shadow-orange-700/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+            className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-400 hover:to-orange-500 text-neutral-950 font-bold text-base shadow-xl shadow-orange-950/40 hover:shadow-orange-700/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             <Calendar className="w-4 h-4 text-neutral-950" />
             <span>오늘 자리 예약 / 단체 문의</span>
@@ -97,7 +104,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
           <a
             id="hero-call-cta"
             href={`tel:${STORE_INFO.phone}`}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-neutral-900/90 border border-neutral-700 text-white font-semibold text-base transition-all duration-300 shadow-lg hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/15 hover:shadow-[0_0_22px_rgba(245,158,11,0.35)] transform hover:-translate-y-0.5 active:translate-y-0 group"
+            className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-neutral-900/90 border border-neutral-700 text-white font-semibold text-base transition-all duration-300 shadow-lg hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/15 hover:shadow-[0_0_22px_rgba(245,158,11,0.35)] transform hover:-translate-y-0.5 active:translate-y-0 group"
           >
             <Phone className="w-4 h-4 text-amber-400 group-hover:scale-110 group-hover:text-amber-300 transition-all duration-300" />
             <span>전화 바로걸기</span>

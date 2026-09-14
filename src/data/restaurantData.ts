@@ -9,8 +9,8 @@ export const STORE_INFO = {
   phone: '010-7795-0918',
   franchiseContact: '1811-6487',
   logoUrl: '/images/logo.svg', // Restored vector logo (Cyan/Indigo/Purple/Amber)
-  address: '충청북도 청주시 청원구 사천동 437-4 (사천로 일원)',
-  addressShort: '충북 청주시 청원구 사천동',
+  address: '충청북도 청주시 청원구 율봉로 11, 1층',
+  addressShort: '충북 청주시 청원구 율봉로 11',
   hours: {
     weekdays: '월요일 ~ 토요일: 오후 4시 ~ 밤 12시 (16:00 ~ 24:00)',
     sunday: '매주 일요일 정기휴무',
