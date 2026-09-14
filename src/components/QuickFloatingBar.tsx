@@ -31,7 +31,16 @@ export const QuickFloatingBar: React.FC<QuickFloatingBarProps> = ({ onOpenReserv
         </button>
 
         <a
-          href="#location"
+          href="#store-address-box"
+          onClick={(e) => {
+            e.preventDefault();
+            const el = document.getElementById('store-address-box');
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+              window.location.hash = 'location';
+            }
+          }}
           className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-neutral-800 text-white text-xs font-bold active:scale-95 transition-transform"
         >
           <MapPin className="w-3.5 h-3.5 text-orange-400" />

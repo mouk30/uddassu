@@ -114,8 +114,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenReservation }) => {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                href={link.href === '#location' ? '#store-address-box' : link.href}
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  if (link.href === '#location') {
+                    e.preventDefault();
+                    const el = document.getElementById('store-address-box');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                      window.location.hash = 'location';
+                    }
+                  }
+                }}
                 className="px-3 py-2 rounded-lg bg-neutral-900 text-sm text-neutral-200 hover:text-amber-400 hover:bg-neutral-800 font-medium transition-colors"
               >
                 {link.label}

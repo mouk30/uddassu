@@ -89,18 +89,31 @@ export const LocationHours: React.FC = () => {
             </div>
 
             {/* Operating Hours Table */}
-            <div className="p-6 rounded-2xl bg-neutral-950 border border-neutral-800 shadow-xl space-y-4">
+            <div className="p-5 sm:p-6 rounded-2xl bg-neutral-950 border border-neutral-800 shadow-xl space-y-4">
               <h3 className="text-base font-bold text-white flex items-center gap-2">
                 <Clock className="w-4 h-4 text-amber-400" />
                 상세 영업시간 안내
               </h3>
 
-              <div className="space-y-3 text-xs sm:text-sm">
-                <div className="flex justify-between py-2 border-b border-neutral-800">
-                  <span className="font-semibold text-neutral-300">오픈 시간 (월요일 ~ 토요일)</span>
-                  <span className="text-amber-400 font-bold text-sm sm:text-base">오후 4시 ~ 밤 12시 (16:00 ~ 24:00)</span>
+              <div className="space-y-3.5 text-xs sm:text-sm">
+                {/* 오픈 시간 (모바일 모드 최적화: 레이블 2줄 + 시간 2줄 총 4줄 가독성 구조) */}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-2.5 border-b border-neutral-800 gap-1 sm:gap-4">
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-neutral-200 text-sm">오픈 시간</span>
+                    <span className="text-neutral-400 text-xs">(월요일 ~ 토요일)</span>
+                  </div>
+                  <div className="flex flex-col sm:text-right mt-1 sm:mt-0">
+                    <span className="text-amber-400 font-extrabold text-base sm:text-lg">
+                      오후 4시 ~ 밤 12시
+                    </span>
+                    <span className="text-amber-300/80 font-bold text-xs sm:text-sm">
+                      (16:00 ~ 24:00)
+                    </span>
+                  </div>
                 </div>
-                <div className="flex justify-between py-2 border-b border-neutral-800">
+
+                {/* 정기 휴무 */}
+                <div className="flex items-center justify-between py-2 border-b border-neutral-800">
                   <span className="font-semibold text-neutral-300">정기 휴무</span>
                   <span className="text-rose-400 font-bold text-sm sm:text-base">매주 일요일 휴무</span>
                 </div>
@@ -112,32 +125,32 @@ export const LocationHours: React.FC = () => {
             </div>
 
             {/* Address & Quick Map Navigators */}
-            <div className="p-6 rounded-2xl bg-neutral-950 border border-neutral-800 shadow-xl space-y-4">
+            <div id="store-address-box" className="scroll-mt-24 p-5 sm:p-6 rounded-2xl bg-neutral-950 border border-neutral-800 shadow-xl space-y-4">
               <h3 className="text-base font-bold text-white flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-amber-400" />
                 위치 및 내비게이션
               </h3>
 
-              <div className="p-3.5 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-between gap-3">
+              <div className="p-4 rounded-xl bg-neutral-900/90 border border-amber-500/30 shadow-inner flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
-                  <span className="text-[11px] text-neutral-500 block mb-0.5">도로명 / 지번 주소</span>
-                  <span className="text-xs sm:text-sm text-neutral-200 font-medium">
+                  <span className="text-[11px] text-amber-400/90 font-semibold block mb-1">도로명 주소</span>
+                  <span className="text-sm sm:text-base text-white font-bold tracking-tight block">
                     {STORE_INFO.address}
                   </span>
                 </div>
 
                 <button
                   onClick={handleCopyAddress}
-                  className="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold border border-neutral-700 transition-colors cursor-pointer"
+                  className="self-start sm:self-auto shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-100 text-xs font-semibold border border-neutral-700 transition-colors cursor-pointer"
                 >
                   {copied ? (
                     <>
                       <Check className="w-3.5 h-3.5 text-emerald-400" />
-                      <span className="text-emerald-400">복사됨!</span>
+                      <span className="text-emerald-400 font-bold">복사됨!</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-3.5 h-3.5 text-neutral-400" />
+                      <Copy className="w-3.5 h-3.5 text-amber-400" />
                       <span>주소 복사</span>
                     </>
                   )}
@@ -179,23 +192,7 @@ export const LocationHours: React.FC = () => {
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-neutral-950/40" />
-
-                {/* Prominent Illuminated Brand Signboard Overlay */}
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-xl bg-neutral-950/90 border border-amber-500/50 shadow-2xl backdrop-blur-md text-center max-w-[90%]">
-                  <div className="flex items-center justify-center gap-2">
-                    <Flame className="w-4 h-4 text-amber-400 animate-pulse" />
-                    <span className="text-sm sm:text-base font-extrabold text-amber-300 tracking-wider">
-                      어따써 <span className="text-white">숯불포차</span>
-                    </span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-semibold border border-amber-500/40">
-                      사천점
-                    </span>
-                  </div>
-                  <span className="text-[10px] text-neutral-400 font-medium tracking-widest block mt-0.5">
-                    [ 숯불 꼼장어 · 특수부위 전문점 ]
-                  </span>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-neutral-950/30" />
 
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                   <span className="text-xs font-bold text-white px-3 py-1 rounded-lg bg-neutral-950/80 backdrop-blur-md border border-neutral-700">
