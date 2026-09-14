@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sun, Clock, Check, Utensils, AlertCircle } from 'lucide-react';
+import { Sun, Clock, Check, Utensils, AlertCircle, Phone } from 'lucide-react';
 import { LUNCH_SPECIALS, STORE_INFO } from '../data/restaurantData';
 
 export const LunchSpecialBanner: React.FC = () => {
@@ -93,7 +93,15 @@ export const LunchSpecialBanner: React.FC = () => {
           <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800 flex items-center gap-3 text-xs text-neutral-400">
             <AlertCircle className="w-4 h-4 text-amber-400 shrink-0" />
             <span>
-              * 파불고기 정식(A, B세트)은 2인 이상 주문 가능하며, 재료 소진 시 조기 마감될 수 있습니다. 단체 점심 예약 문의는 <strong>010-7795-0918</strong>로 편하게 연락주세요.
+              * 파불고기 정식(A, B세트)은 2인 이상 주문 가능하며, 재료 소진 시 조기 마감될 수 있습니다. 단체 점심 예약 문의는{' '}
+              <a
+                href={`tel:${STORE_INFO.phone}`}
+                className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-neutral-800 border border-neutral-700 text-amber-300 font-bold hover:border-amber-400 hover:text-amber-200 hover:bg-amber-500/20 hover:shadow-[0_0_12px_rgba(245,158,11,0.35)] transition-all duration-300 group align-middle mx-1"
+              >
+                <Phone className="w-3 h-3 text-amber-400 group-hover:scale-110 transition-transform" />
+                <span>010-7795-0918</span>
+              </a>
+              로 편하게 연락주세요.
             </span>
           </div>
         </div>

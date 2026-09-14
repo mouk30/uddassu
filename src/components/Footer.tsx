@@ -1,6 +1,7 @@
 import React from 'react';
-import { Flame, Phone, MapPin, Clock, ShieldCheck } from 'lucide-react';
+import { Phone, MapPin, Clock, ShieldCheck } from 'lucide-react';
 import { STORE_INFO } from '../data/restaurantData';
+import { BrandLogo } from './BrandLogo';
 
 export const Footer: React.FC = () => {
   return (
@@ -9,18 +10,11 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-neutral-900">
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white">
-                <Flame className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="text-lg font-bold text-white tracking-tight">
-                  어따써 <span className="text-amber-400">숯불포차</span>
-                </span>
-                <span className="text-xs text-neutral-400 block font-normal">
-                  청주사천점 [숯불 꼼장어 전문점]
-                </span>
-              </div>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+              <BrandLogo className="h-11 sm:h-14 w-auto max-w-[240px] sm:max-w-[280px]" />
+              <span className="text-[11px] px-2 py-0.5 rounded-full bg-neutral-900 border border-neutral-800 text-amber-300 font-semibold w-fit">
+                청주사천점
+              </span>
             </div>
 
             <p className="text-neutral-400 leading-relaxed text-xs max-w-sm">
@@ -56,9 +50,15 @@ export const Footer: React.FC = () => {
             <p className="text-neutral-300 leading-relaxed">
               {STORE_INFO.address}
             </p>
-            <p className="text-white font-bold pt-1">
-              직통 전화: <a href={`tel:${STORE_INFO.phone}`} className="text-amber-400 hover:underline">{STORE_INFO.phone}</a>
-            </p>
+            <div className="pt-1.5">
+              <a
+                href={`tel:${STORE_INFO.phone}`}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-700 text-amber-300 font-bold text-xs transition-all duration-300 hover:border-amber-400 hover:text-amber-200 hover:bg-amber-500/15 hover:shadow-[0_0_15px_rgba(245,158,11,0.35)] group"
+              >
+                <Phone className="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 transition-transform" />
+                <span>직통 전화: {STORE_INFO.phone}</span>
+              </a>
+            </div>
             <p className="text-neutral-500 text-[11px]">
               포장 주문 및 단체석 사전 예약 환영
             </p>

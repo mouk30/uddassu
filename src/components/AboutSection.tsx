@@ -96,7 +96,7 @@ export const AboutSection: React.FC = () => {
                     특수부위 허겁살 & 시원한 빙소면
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
-                    꼼장어 외에도 쫀득한 뒷고기 '허겁살', 통갈매기 '지겁살', 소갈비살과 속 풀어주는 청국장술밥 & 살얼음 빙소면의 완벽한 상차림을 선사합니다.
+                    꼼장어 외에도 쫀득한 명품 뒷고기 '허겁살', 소갈비살과 속 풀어주는 청국장술밥 & 살얼음 빙소면의 완벽한 상차림을 선사합니다.
                   </p>
                 </div>
               </div>
@@ -117,8 +117,8 @@ export const AboutSection: React.FC = () => {
           </div>
           <div className="hidden sm:block w-px h-10 bg-neutral-800" />
           <div>
-            <div className="text-2xl sm:text-3xl font-black text-amber-300 mb-1">아침 7시 ~ 밤 12시</div>
-            <div className="text-xs text-neutral-400">청주 사천동의 든든한 쉼터</div>
+            <div className="text-2xl sm:text-3xl font-black text-amber-300 mb-1">오후 4시 ~ 밤 12시</div>
+            <div className="text-xs text-neutral-400">월요일 ~ 토요일 (매주 일요일 휴무)</div>
           </div>
           <div className="hidden sm:block w-px h-10 bg-neutral-800" />
           <div>

@@ -16,10 +16,10 @@ export const QuickFloatingBar: React.FC<QuickFloatingBarProps> = ({ onOpenReserv
       <div className="bg-neutral-900/95 backdrop-blur-xl border border-neutral-700/80 rounded-2xl p-2 shadow-2xl flex items-center justify-between gap-1.5">
         <a
           href={`tel:${STORE_INFO.phone}`}
-          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-neutral-800 text-white text-xs font-bold active:scale-95 transition-transform"
+          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-neutral-800 text-white text-xs font-bold border border-neutral-700/50 hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/15 hover:shadow-[0_0_15px_rgba(245,158,11,0.35)] active:scale-95 transition-all duration-300 group"
         >
-          <Phone className="w-3.5 h-3.5 text-amber-400" />
-          <span>전화</span>
+          <Phone className="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 group-hover:text-amber-300 transition-all duration-300" />
+          <span>전화 걸기</span>
         </a>
 
         <button

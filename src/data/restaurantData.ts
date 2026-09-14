@@ -8,6 +8,7 @@ export const STORE_INFO = {
   slogan: '은은한 참숯 불향과 터질듯한 탱글함, 사천동을 대표하는 꼼장어 & 특수부위 명가',
   phone: '010-7795-0918',
   franchiseContact: '1811-6487',
+  logoUrl: '/images/logo.svg', // Restored vector logo (Cyan/Indigo/Purple/Amber)
   address: '충청북도 청주시 청원구 사천동 437-4 (사천로 일원)',
   addressShort: '충북 청주시 청원구 사천동',
   hours: {

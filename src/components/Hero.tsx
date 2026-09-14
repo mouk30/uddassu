@@ -1,6 +1,7 @@
 import React from 'react';
-import { Flame, Phone, Calendar, ArrowDown, Sparkles, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { Flame, Phone, Calendar, ArrowDown, Sparkles, CheckCircle2, ShieldCheck, MapPin } from 'lucide-react';
 import { STORE_INFO } from '../data/restaurantData';
+import { BrandLogo } from './BrandLogo';
 
 interface HeroProps {
   onOpenReservation: () => void;
@@ -23,6 +24,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        {/* Official Brand Logo */}
+        <div className="mb-5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-neutral-950/70 border border-neutral-800/80 backdrop-blur-md shadow-2xl">
+          <BrandLogo className="h-12 sm:h-16 w-auto max-w-[280px] sm:max-w-[360px]" />
+        </div>
+
         {/* Top Eyebrow Badge */}
         <div
           id="hero-badge"
@@ -66,22 +72,34 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full max-w-md mb-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full max-w-2xl mb-12">
+          {/* 오시는길 소개 버튼 */}
+          <a
+            id="hero-directions-cta"
+            href="#location"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-neutral-900/90 border border-neutral-700 text-white font-semibold text-base transition-all duration-300 shadow-lg hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/15 hover:shadow-[0_0_22px_rgba(245,158,11,0.35)] transform hover:-translate-y-0.5 active:translate-y-0 group"
+          >
+            <MapPin className="w-4 h-4 text-amber-400 group-hover:scale-110 group-hover:text-amber-300 transition-all duration-300" />
+            <span>오시는길 소개</span>
+          </a>
+
+          {/* 오늘 자리 예약 / 단체 문의 */}
           <button
             id="hero-reserve-cta"
             onClick={onOpenReservation}
-            className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-400 hover:to-orange-500 text-neutral-950 font-bold text-base shadow-xl shadow-orange-950/40 hover:shadow-orange-700/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-400 hover:to-orange-500 text-neutral-950 font-bold text-base shadow-xl shadow-orange-950/40 hover:shadow-orange-700/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             <Calendar className="w-4 h-4 text-neutral-950" />
             <span>오늘 자리 예약 / 단체 문의</span>
           </button>
 
+          {/* 전화 바로걸기 (금색 호버링 적용) */}
           <a
             id="hero-call-cta"
             href={`tel:${STORE_INFO.phone}`}
-            className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 border border-neutral-700 hover:border-amber-500/50 text-white font-semibold text-base transition-all shadow-lg hover:text-amber-300"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-neutral-900/90 border border-neutral-700 text-white font-semibold text-base transition-all duration-300 shadow-lg hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/15 hover:shadow-[0_0_22px_rgba(245,158,11,0.35)] transform hover:-translate-y-0.5 active:translate-y-0 group"
           >
-            <Phone className="w-4 h-4 text-amber-400" />
+            <Phone className="w-4 h-4 text-amber-400 group-hover:scale-110 group-hover:text-amber-300 transition-all duration-300" />
             <span>전화 바로걸기</span>
           </a>
         </div>

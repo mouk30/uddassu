@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MapPin, Calendar, Menu, X, Flame, Clock } from 'lucide-react';
 import { STORE_INFO } from '../data/restaurantData';
+import { BrandLogo } from './BrandLogo';
 
 interface NavbarProps {
   onOpenReservation: () => void;
@@ -9,6 +10,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenReservation }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,23 +41,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenReservation }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 via-orange-600 to-red-600 flex items-center justify-center shadow-lg shadow-orange-950/40 group-hover:scale-105 transition-transform">
-            <Flame className="w-6 h-6 text-white animate-pulse" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-bold tracking-tight text-white font-sans">
-                어따써 <span className="text-amber-400">숯불포차</span>
-              </span>
-              <span className="text-xs px-2 py-0.5 rounded-full bg-neutral-800 border border-neutral-700 text-amber-300 font-medium">
-                사천점
-              </span>
-            </div>
-            <p className="text-[11px] text-neutral-400 font-normal">
-              숯불 꼼장어 · 특수부위 전문점
-            </p>
-          </div>
+        <a href="#" className="flex items-center gap-2.5 group py-1" aria-label="어따써 숯불포차 홈으로">
+          <BrandLogo className="h-10 sm:h-12 w-auto max-w-[220px] sm:max-w-[270px] group-hover:scale-105 transition-transform" />
+          <span className="hidden sm:inline-flex text-[11px] px-2 py-0.5 rounded-full bg-neutral-900/90 border border-neutral-700 text-amber-300 font-semibold tracking-wide">
+            사천점
+          </span>
         </a>
 
         {/* Desktop Navigation */}
@@ -76,9 +66,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenReservation }) => {
           <a
             id="nav-call-btn"
             href={`tel:${STORE_INFO.phone}`}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-neutral-900 border border-neutral-700 text-neutral-200 hover:text-white hover:border-neutral-500 text-xs font-semibold transition-all hover:bg-neutral-800"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-neutral-900 border border-neutral-700 text-neutral-200 text-xs font-semibold transition-all duration-300 hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/15 hover:shadow-[0_0_18px_rgba(245,158,11,0.35)] group"
           >
-            <Phone className="w-3.5 h-3.5 text-amber-400" />
+            <Phone className="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 group-hover:text-amber-300 transition-all duration-300" />
             <span>010-7795-0918</span>
           </a>
 
@@ -112,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenReservation }) => {
           <div className="py-2 border-b border-neutral-800 flex items-center justify-between text-xs text-neutral-400">
             <span className="flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-amber-400" />
-              오전 07:00 ~ 익일 24:00
+              오후 16:00 ~ 24:00 (일 휴무)
             </span>
             <span className="flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 text-amber-400" />
@@ -136,10 +126,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenReservation }) => {
           <div className="pt-3 flex gap-2">
             <a
               href={`tel:${STORE_INFO.phone}`}
-              className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-neutral-800 text-white text-xs font-bold border border-neutral-700 active:scale-98"
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-neutral-800 text-white text-xs font-bold border border-neutral-700 hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/15 hover:shadow-[0_0_16px_rgba(245,158,11,0.35)] transition-all duration-300 active:scale-98 group"
             >
-              <Phone className="w-4 h-4 text-amber-400" />
-              전화 걸기
+              <Phone className="w-4 h-4 text-amber-400 group-hover:scale-110 group-hover:text-amber-300 transition-all duration-300" />
+              전화 걸기 (010-7795-0918)
             </a>
             <button
               onClick={() => {

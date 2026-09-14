@@ -79,10 +79,10 @@ export const LocationHours: React.FC = () => {
 
                 <a
                   href={`tel:${STORE_INFO.phone}`}
-                  className="px-3 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-amber-300 text-xs font-bold flex items-center gap-1.5 transition-colors"
+                  className="px-3.5 py-1.5 rounded-lg bg-neutral-900 border border-neutral-700 text-amber-300 text-xs font-bold flex items-center gap-1.5 transition-all duration-300 hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/15 hover:shadow-[0_0_16px_rgba(245,158,11,0.35)] group"
                 >
-                  <Phone className="w-3.5 h-3.5 text-amber-400" />
-                  전화 문의
+                  <Phone className="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 group-hover:text-amber-300 transition-all duration-300" />
+                  <span>전화 문의 (010-7795-0918)</span>
                 </a>
               </div>
               <p className="text-xs sm:text-sm text-neutral-300">{storeStatus.sub}</p>
@@ -201,9 +201,13 @@ export const LocationHours: React.FC = () => {
                   <span className="text-xs font-bold text-white px-3 py-1 rounded-lg bg-neutral-950/80 backdrop-blur-md border border-neutral-700">
                     청주 사천동 어따써 숯불포차 전경
                   </span>
-                  <span className="text-xs text-amber-400 font-bold bg-amber-500/20 px-2.5 py-1 rounded-lg border border-amber-500/40">
-                    사천점 직통: 010-7795-0918
-                  </span>
+                  <a
+                    href={`tel:${STORE_INFO.phone}`}
+                    className="text-xs text-amber-300 font-bold bg-neutral-950/90 hover:bg-amber-500/20 px-3 py-1.5 rounded-lg border border-amber-500/50 hover:border-amber-400 hover:shadow-[0_0_15px_rgba(245,158,11,0.45)] transition-all duration-300 flex items-center gap-1.5 group"
+                  >
+                    <Phone className="w-3 h-3 text-amber-400 group-hover:scale-110 transition-transform" />
+                    <span>사천점 직통: {STORE_INFO.phone}</span>
+                  </a>
                 </div>
               </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Maximize2, X, Sparkles, Flame, CheckCircle2 } from 'lucide-react';
+import { BrandLogo } from './BrandLogo';
 
 export const ChalkboardMenuBoard: React.FC = () => {
   const [isZoomed, setIsZoomed] = useState(false);
@@ -41,22 +42,7 @@ export const ChalkboardMenuBoard: React.FC = () => {
 
               {/* Logo Area */}
               <div className="flex items-center gap-3">
-                <div className="text-right">
-                  <div className="flex items-center gap-1 justify-end">
-                    <span className="text-sm sm:text-base font-extrabold tracking-tighter text-white">
-                      어따써
-                    </span>
-                    <span className="text-lg sm:text-2xl font-black text-amber-400 tracking-wider">
-                      숯불포차
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-1 justify-end text-[10px] sm:text-xs text-amber-300 font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 inline-block" />
-                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 inline-block" />
-                    <span>숯불 꼼장어 전문점</span>
-                  </div>
-                </div>
+                <BrandLogo className="h-10 sm:h-14 w-auto max-w-[210px] sm:max-w-[260px]" />
 
                 <button
                   onClick={() => setIsZoomed(true)}
@@ -86,9 +72,9 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div className="flex items-baseline justify-between border-b border-stone-800/80 pb-2">
                       <div>
                         <div className="text-white font-black text-base sm:text-lg tracking-wide">
-                          왕소금구이 <span className="text-xs sm:text-sm font-medium text-stone-400">(200g)</span>
+                          왕소금구이 <span className="text-xs sm:text-sm font-semibold text-sky-400">(200g)</span>
                         </div>
-                        <div className="text-[11px] sm:text-xs text-stone-500 font-medium mt-0.5">
+                        <div className="text-[11px] sm:text-xs text-sky-300/90 font-semibold mt-0.5">
                           (100g 9,500원)
                         </div>
                       </div>
@@ -101,9 +87,9 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div className="flex items-baseline justify-between border-b border-stone-800/80 pb-2">
                       <div>
                         <div className="text-white font-black text-base sm:text-lg tracking-wide">
-                          양 념 구 이 <span className="text-xs sm:text-sm font-medium text-stone-400">(200g)</span>
+                          양 념 구 이 <span className="text-xs sm:text-sm font-semibold text-sky-400">(200g)</span>
                         </div>
-                        <div className="text-[11px] sm:text-xs text-stone-500 font-medium mt-0.5">
+                        <div className="text-[11px] sm:text-xs text-sky-300/90 font-semibold mt-0.5">
                           (100g 9,500원)
                         </div>
                       </div>
@@ -116,9 +102,9 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div className="flex items-baseline justify-between border-b border-stone-800/80 pb-2">
                       <div>
                         <div className="text-white font-black text-base sm:text-lg tracking-wide">
-                          야채꼼장어 <span className="text-xs sm:text-sm font-medium text-stone-400">(200g)</span>
+                          야채꼼장어 <span className="text-xs sm:text-sm font-semibold text-sky-400">(200g)</span>
                         </div>
-                        <div className="text-[11px] sm:text-xs text-stone-500 font-medium mt-0.5">
+                        <div className="text-[11px] sm:text-xs text-sky-300/90 font-semibold mt-0.5">
                           (100g 9,500원)
                         </div>
                       </div>
@@ -142,9 +128,9 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div className="flex items-baseline justify-between border-b border-stone-800/80 pb-2">
                       <div>
                         <div className="text-white font-black text-base sm:text-lg tracking-wide">
-                          생 소 갈 비 살 <span className="text-xs sm:text-sm font-medium text-stone-400">(200g)</span>
+                          생 소 갈 비 살 <span className="text-xs sm:text-sm font-semibold text-sky-400">(200g)</span>
                         </div>
-                        <div className="text-[11px] sm:text-xs text-stone-500 font-medium mt-0.5">
+                        <div className="text-[11px] sm:text-xs text-sky-300/90 font-semibold mt-0.5">
                           (미국 · 호주산 100g 8,500원)
                         </div>
                       </div>
@@ -157,9 +143,9 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div className="flex items-baseline justify-between border-b border-stone-800/80 pb-2">
                       <div>
                         <div className="text-white font-black text-base sm:text-lg tracking-wide">
-                          양념소갈비살 <span className="text-xs sm:text-sm font-medium text-stone-400">(200g)</span>
+                          양념소갈비살 <span className="text-xs sm:text-sm font-semibold text-sky-400">(200g)</span>
                         </div>
-                        <div className="text-[11px] sm:text-xs text-stone-500 font-medium mt-0.5">
+                        <div className="text-[11px] sm:text-xs text-sky-300/90 font-semibold mt-0.5">
                           (미국 · 호주산 100g 8,500원)
                         </div>
                       </div>
@@ -172,9 +158,9 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div className="flex items-baseline justify-between border-b border-stone-800/80 pb-2">
                       <div>
                         <div className="text-white font-black text-base sm:text-lg tracking-wide">
-                          허겁살구이-(뒷고기 <span className="text-xs sm:text-sm font-medium text-stone-400">200g</span>)
+                          허겁살구이-(뒷고기 <span className="text-xs sm:text-sm font-semibold text-sky-400">200g</span>)
                         </div>
-                        <div className="text-[11px] sm:text-xs text-stone-500 font-medium mt-0.5">
+                        <div className="text-[11px] sm:text-xs text-sky-300/90 font-semibold mt-0.5">
                           (국내산 100g 6,500원)
                         </div>
                       </div>
@@ -191,9 +177,9 @@ export const ChalkboardMenuBoard: React.FC = () => {
                             추가메뉴
                           </span>
                           <span>돼지꼬리</span>
-                          <span className="text-xs sm:text-sm font-medium text-stone-400">(200g)</span>
+                          <span className="text-xs sm:text-sm font-semibold text-sky-400">(200g)</span>
                         </div>
-                        <div className="text-[11px] sm:text-xs text-stone-500 font-medium mt-0.5">
+                        <div className="text-[11px] sm:text-xs text-sky-300/90 font-semibold mt-0.5">
                           (국내산 100g 5,500원)
                         </div>
                       </div>
@@ -220,7 +206,7 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div className="flex items-baseline justify-between border-b border-stone-800/80 pb-2 gap-2">
                       <div className="text-white font-black text-sm sm:text-base leading-snug">
                         <span className="text-amber-400 font-black mr-1.5 text-base sm:text-lg">A</span>
-                        <span>꼼장어구이<span className="text-stone-400 text-xs font-normal">(2인/400g)</span> + 소갈비살<span className="text-stone-400 text-xs font-normal">(2인/400g)</span></span>
+                        <span>꼼장어구이<span className="text-sky-400 text-xs font-semibold">(2인/400g)</span> + 소갈비살<span className="text-sky-400 text-xs font-semibold">(2인/400g)</span></span>
                       </div>
                       <div className="text-lg sm:text-2xl font-black text-amber-400 tracking-tight whitespace-nowrap">
                         ₩67,000
@@ -231,7 +217,7 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div className="flex items-baseline justify-between border-b border-stone-800/80 pb-2 gap-2">
                       <div className="text-white font-black text-sm sm:text-base leading-snug">
                         <span className="text-amber-400 font-black mr-1.5 text-base sm:text-lg">B</span>
-                        <span>야채꼼장어<span className="text-stone-400 text-xs font-normal">(2인/400g)</span> + 허겁살구이<span className="text-stone-400 text-xs font-normal">(2인/400g)</span></span>
+                        <span>야채꼼장어<span className="text-sky-400 text-xs font-semibold">(2인/400g)</span> + 허겁살구이<span className="text-sky-400 text-xs font-semibold">(2인/400g)</span></span>
                       </div>
                       <div className="text-lg sm:text-2xl font-black text-amber-400 tracking-tight whitespace-nowrap">
                         ₩65,000
@@ -342,7 +328,7 @@ export const ChalkboardMenuBoard: React.FC = () => {
             {/* Bottom Origin Notice Banner */}
             <div className="mt-8 pt-5 border-t border-stone-800 text-center">
               <p className="text-xs sm:text-sm text-stone-300 font-medium leading-relaxed">
-                어따써 꼼장어 에서는 <strong className="text-white">돼지고기(국내산)</strong>, <strong className="text-white">쌀(국내산)</strong>, <strong className="text-white">배추(국내산, 중국산)</strong>, <strong className="text-white">고춧가루(국내산, 중국산)</strong>를 사용하고 있습니다.
+                어따써 꼼장어 에서는 <strong className="text-sky-300 font-bold">돼지고기(국내산)</strong>, <strong className="text-sky-300 font-bold">쌀(국내산)</strong>, <strong className="text-sky-300 font-bold">배추(국내산, 중국산)</strong>, <strong className="text-sky-300 font-bold">고춧가루(국내산, 중국산)</strong>를 사용하고 있습니다.
               </p>
             </div>
           </div>
@@ -366,44 +352,76 @@ export const ChalkboardMenuBoard: React.FC = () => {
               <X className="w-6 h-6" />
             </button>
 
-            <div className="text-center pb-4 mb-6 border-b border-stone-800">
-              <span className="text-2xl sm:text-3xl font-black text-white">어따써 </span>
-              <span className="text-2xl sm:text-3xl font-black text-amber-400">숯불포차 </span>
-              <span className="text-sm text-stone-400 block mt-1">숯불 꼼장어 전문점 [청주사천점]</span>
+            <div className="flex flex-col items-center justify-center pb-4 mb-6 border-b border-stone-800">
+              <BrandLogo className="h-14 sm:h-20 w-auto max-w-[320px] sm:max-w-[440px]" />
+              <span className="text-xs px-2.5 py-0.5 mt-2.5 rounded-full bg-neutral-900 border border-neutral-700 text-amber-300 font-semibold tracking-wider">
+                청주사천점
+              </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
               <div className="space-y-4">
                 <div className="bg-stone-900/60 p-4 rounded-xl border border-stone-800">
-                  <div className="font-bold text-amber-400 mb-2 border-b border-stone-800 pb-1">꼼 장 어 (200g)</div>
+                  <div className="font-bold text-amber-400 mb-2 border-b border-stone-800 pb-1">
+                    꼼 장 어 <span className="text-sky-400 text-xs font-semibold">(200g)</span>
+                  </div>
                   <div className="space-y-1.5">
-                    <div className="flex justify-between"><span>왕소금구이 (100g 9,500원)</span><span className="text-amber-400 font-bold">₩19,000</span></div>
-                    <div className="flex justify-between"><span>양념구이 (100g 9,500원)</span><span className="text-amber-400 font-bold">₩19,000</span></div>
-                    <div className="flex justify-between"><span>야채꼼장어 (100g 9,500원)</span><span className="text-amber-400 font-bold">₩19,000</span></div>
+                    <div className="flex justify-between">
+                      <span>왕소금구이 <span className="text-sky-300 text-xs font-semibold">(100g 9,500원)</span></span>
+                      <span className="text-amber-400 font-bold">₩19,000</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>양념구이 <span className="text-sky-300 text-xs font-semibold">(100g 9,500원)</span></span>
+                      <span className="text-amber-400 font-bold">₩19,000</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>야채꼼장어 <span className="text-sky-300 text-xs font-semibold">(100g 9,500원)</span></span>
+                      <span className="text-amber-400 font-bold">₩19,000</span>
+                    </div>
                   </div>
                 </div>
 
                 <div className="bg-stone-900/60 p-4 rounded-xl border border-stone-800">
-                  <div className="font-bold text-amber-400 mb-2 border-b border-stone-800 pb-1">고 기 류 (200g)</div>
+                  <div className="font-bold text-amber-400 mb-2 border-b border-stone-800 pb-1">
+                    고 기 류 <span className="text-sky-400 text-xs font-semibold">(200g)</span>
+                  </div>
                   <div className="space-y-1.5">
-                    <div className="flex justify-between"><span>생소갈비살 (100g 8,500원)</span><span className="text-amber-400 font-bold">₩17,000</span></div>
-                    <div className="flex justify-between"><span>양념소갈비살 (100g 8,500원)</span><span className="text-amber-400 font-bold">₩17,000</span></div>
-                    <div className="flex justify-between"><span>허겁살구이-(뒷고기 100g 6,500원)</span><span className="text-amber-400 font-bold">₩15,000</span></div>
-                    <div className="flex justify-between text-amber-300"><span>[추가] 돼지꼬리 (100g 5,500원)</span><span className="text-amber-400 font-bold">₩11,000</span></div>
+                    <div className="flex justify-between">
+                      <span>생소갈비살 <span className="text-sky-300 text-xs font-semibold">(미국·호주산 100g 8,500원)</span></span>
+                      <span className="text-amber-400 font-bold">₩17,000</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>양념소갈비살 <span className="text-sky-300 text-xs font-semibold">(미국·호주산 100g 8,500원)</span></span>
+                      <span className="text-amber-400 font-bold">₩17,000</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>허겁살구이-(뒷고기 <span className="text-sky-300 text-xs font-semibold">국내산 100g 6,500원</span>)</span>
+                      <span className="text-amber-400 font-bold">₩15,000</span>
+                    </div>
+                    <div className="flex justify-between text-amber-300">
+                      <span>[추가] 돼지꼬리 <span className="text-sky-300 text-xs font-semibold">(국내산 100g 5,500원)</span></span>
+                      <span className="text-amber-400 font-bold">₩11,000</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div className="bg-stone-900/60 p-4 rounded-xl border border-stone-800">
-                  <div className="font-bold text-amber-400 mb-2 border-b border-stone-800 pb-1">세트 메뉴 (400g+400g)</div>
+                  <div className="font-bold text-amber-400 mb-2 border-b border-stone-800 pb-1">
+                    세트 메뉴 <span className="text-sky-400 text-xs font-semibold">(400g+400g)</span>
+                  </div>
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <div><span className="text-amber-400 font-bold">A</span> 꼼장어구이 + 소갈비살</div>
+                      <div>
+                        <span className="text-amber-400 font-bold">A</span> 꼼장어구이 + 소갈비살 <span className="text-sky-400 text-xs font-semibold">(총 800g)</span>
+                      </div>
                       <span className="text-amber-400 font-bold text-base">₩67,000</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <div><span className="text-amber-400 font-bold">B</span> 야채꼼장어 + 허겁살구이</div>
+                      <div>
+                        <span className="text-amber-400 font-bold">B</span> 야채꼼장어 + 허겁살구이 <span className="text-sky-400 text-xs font-semibold">(총 800g)</span>
+                      </div>
                       <span className="text-amber-400 font-bold text-base">₩65,000</span>
                     </div>
                   </div>
@@ -415,7 +433,7 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div>청국장 ₩3,000</div>
                     <div>냉면(물/비빔) ₩6,000</div>
                     <div>청국장술밥 ₩4,000</div>
-                    <div>볶음밥 ₩5,000</div>
+                    <div>볶음밥 <span className="text-sky-300 text-[10px] font-semibold">(야채꼼장어만)</span> ₩5,000</div>
                     <div>온소면 / 빙소면 ₩6,000</div>
                     <div>공기밥 ₩1,000</div>
                     <div className="col-span-2 pt-2 border-t border-stone-800 flex flex-wrap gap-2 text-stone-300">
@@ -430,7 +448,7 @@ export const ChalkboardMenuBoard: React.FC = () => {
             </div>
 
             <div className="mt-6 text-center text-xs text-stone-400">
-              어따써 꼼장어 에서는 돼지고기(국내산), 쌀(국내산), 배추(국내산, 중국산), 고춧가루(국내산, 중국산)를 사용하고 있습니다.
+              어따써 꼼장어 에서는 <span className="text-sky-300 font-semibold">돼지고기(국내산)</span>, <span className="text-sky-300 font-semibold">쌀(국내산)</span>, <span className="text-sky-300 font-semibold">배추(국내산, 중국산)</span>, <span className="text-sky-300 font-semibold">고춧가루(국내산, 중국산)</span>를 사용하고 있습니다.
             </div>
           </div>
         </div>

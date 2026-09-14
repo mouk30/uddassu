@@ -93,7 +93,7 @@ export const SetMenuSection: React.FC<SetMenuSectionProps> = ({ onOpenReservatio
                     <span className="text-xs font-bold text-amber-400 px-2.5 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/20">
                       {set.targetPeople}
                     </span>
-                    <span className="text-xs text-neutral-400 font-medium">
+                    <span className="text-xs text-sky-400 font-semibold px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/20">
                       {set.totalWeight}
                     </span>
                   </div>

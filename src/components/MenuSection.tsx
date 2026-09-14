@@ -131,7 +131,7 @@ export const MenuSection: React.FC = () => {
                         )}
                       </div>
                       {item.weight && (
-                        <span className="text-[11px] text-neutral-400 block mt-0.5">
+                        <span className="text-[11px] text-sky-400 font-semibold block mt-0.5">
                           {item.weight}
                           {item.pricePer100g && ` (${item.pricePer100g})`}
                         </span>
