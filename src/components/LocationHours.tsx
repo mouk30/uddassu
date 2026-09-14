@@ -228,16 +228,10 @@ export const LocationHours: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Franchise & Business Details */}
-                <div className="pt-4 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-400">
-                  <div>
-                    <span>가맹 문의 Hotline: </span>
-                    <strong className="text-neutral-200">(주)만객 {STORE_INFO.franchiseContact}</strong>
-                  </div>
-                  <div>
-                    <span>사업자 형태: </span>
-                    <strong className="text-neutral-200">일반음식점</strong>
-                  </div>
+                {/* Business Details */}
+                <div className="pt-4 border-t border-neutral-800 flex items-center justify-between text-xs text-neutral-400">
+                  <span>사업자 형태: </span>
+                  <strong className="text-neutral-200">일반음식점</strong>
                 </div>
               </div>
             </div>

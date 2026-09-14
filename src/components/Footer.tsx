@@ -20,12 +20,6 @@ export const Footer: React.FC = () => {
             <p className="text-neutral-400 leading-relaxed text-xs max-w-sm">
               특대형 왕꼼장어의 쫄깃한 식감과 참숯 백탄의 은은한 훈연향, 쫀득한 뒷고기 허겁살까지. 청주 사천동에서 신선하고 정직한 맛으로 보답하겠습니다.
             </p>
-
-            <div className="flex items-center gap-2 pt-1 text-neutral-300">
-              <span className="px-2.5 py-1 rounded-md bg-neutral-900 border border-neutral-800 text-[11px] font-medium text-amber-300">
-                가맹점 문의 (주)만객 {STORE_INFO.franchiseContact}
-              </span>
-            </div>
           </div>
 
           {/* Quick Contact & Hours */}
