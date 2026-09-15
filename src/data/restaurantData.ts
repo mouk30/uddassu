@@ -20,7 +20,6 @@ export const STORE_INFO = {
   },
   amenities: [
     '단체석 완비 (회식 및 모임 환영)',
-    '주차 가능 및 인근 골목 주차 용이',
     '예약 가능 (전화 및 모바일 간편 접수)',
     '포장 가능',
     '무선 인터넷 (Wi-Fi)',
@@ -115,7 +114,7 @@ export const MENU_ITEMS: MenuItem[] = [
     pricePer100g: '국내산 100g 5,500원',
     description: '콜라겐 듬뿍! 숯불에 바삭하고 쫀득하게 구워 매콤소스와 콩가루에 찍어먹는 포차 최고의 술안주',
     tag: '별미 추가메뉴',
-    image: '/images/pork_rind_1789296322215.jpg',
+    image: '/images/grilled_pork_tail_1789443130195.jpg',
     pairingNote: '고소한 콩가루와 특제 매콤 소스를 콕 찍어 쫀득바삭한 식감을 느껴보세요.',
   },
 
