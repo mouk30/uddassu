@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Clock, ShieldCheck } from 'lucide-react';
+import { Phone, MapPin, Clock, ShieldCheck, MessageCircle } from 'lucide-react';
 import { STORE_INFO } from '../data/restaurantData';
 import { BrandLogo } from './BrandLogo';
 
@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
             <p className="text-neutral-300 leading-relaxed">
               {STORE_INFO.address}
             </p>
-            <div className="pt-1.5">
+            <div className="pt-1.5 flex flex-col gap-2">
               <a
                 href={`tel:${STORE_INFO.phone}`}
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-700 text-amber-300 font-bold text-xs transition-all duration-300 hover:border-amber-400 hover:text-amber-200 hover:bg-amber-500/15 hover:shadow-[0_0_15px_rgba(245,158,11,0.35)] group"
@@ -52,6 +52,18 @@ export const Footer: React.FC = () => {
                 <Phone className="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 transition-transform" />
                 <span>직통 전화: {STORE_INFO.phone}</span>
               </a>
+
+              {STORE_INFO.kakaoOpenChat && (
+                <a
+                  href={STORE_INFO.kakaoOpenChat}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#FEE500] text-[#371D1E] font-bold text-xs hover:bg-[#FFEB00] transition-colors"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 fill-[#371D1E]" />
+                  <span>카카오톡 1:1 상담 오픈채팅</span>
+                </a>
+              )}
             </div>
             <p className="text-neutral-500 text-[11px]">
               포장 주문 및 단체석 사전 예약 환영

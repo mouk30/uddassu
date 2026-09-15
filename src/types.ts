@@ -23,17 +23,19 @@ export interface SetMenuItem {
   items: string[];
   description: string;
   tag: string;
-  popularRank: number;
+  popularRank?: number;
+  badgeText?: string;
 }
 
 export interface LunchSpecialItem {
   id: string;
-  code: string;
+  code?: string;
   name: string;
   price: number;
   description: string;
-  includes: string[];
-  hours: string;
+  includes?: string[];
+  hours?: string;
+  servingTime?: string;
   minOrder?: string;
 }
 

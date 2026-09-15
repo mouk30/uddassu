@@ -13,191 +13,112 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   return (
     <div className={`inline-flex items-center select-none ${className}`}>
       <svg
-        viewBox="0 0 680 120"
+        viewBox="0 0 760 180"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"
         style={{ overflow: 'visible' }}
-        aria-label="어따써 숯불포차 로고"
+        aria-label="어따써 숯불포차 사천점 로고"
       >
         <defs>
-          {/* Cyan Glow Filter */}
-          <filter id="cyanNeonGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="0" stdDeviation="3.5" floodColor="#06b6d4" floodOpacity="0.75" />
-            <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="#000000" floodOpacity="0.6" />
+          {/* Subtle drop shadow for depth */}
+          <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="#000000" floodOpacity="0.8" />
           </filter>
 
-          {/* Orange Glow Filter */}
-          <filter id="orangeNeonGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#f97316" floodOpacity="0.7" />
-          </filter>
-
-          {/* General 3D Drop Shadow */}
-          <filter id="solidShadow" x="-10%" y="-10%" width="120%" height="120%">
-            <feDropShadow dx="0" dy="2.5" stdDeviation="1.5" floodColor="#000000" floodOpacity="0.8" />
-          </filter>
-
-          {/* Text Gradients */}
-          {/* 어따써 Gradient */}
-          <linearGradient id="eottaTextGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="70%" stopColor="#f8fafc" />
-            <stop offset="100%" stopColor="#e2e8f0" />
+          {/* Red Seal Box Gradient */}
+          <linearGradient id="sealGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#dc2626" />
+            <stop offset="100%" stopColor="#991b1b" />
           </linearGradient>
 
-          {/* 숯 Gradient (Deep Cobalt to Electric Blue) */}
-          <linearGradient id="soothCharGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#93c5fd" />
-            <stop offset="25%" stopColor="#60a5fa" />
-            <stop offset="65%" stopColor="#2563eb" />
-            <stop offset="100%" stopColor="#1d4ed8" />
+          {/* 4 Colored Stepped Palette Bars */}
+          <linearGradient id="stepRed" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#ef4444" />
+            <stop offset="100%" stopColor="#b91c1c" />
+          </linearGradient>
+          <linearGradient id="stepYellow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#f59e0b" />
+            <stop offset="100%" stopColor="#d97706" />
+          </linearGradient>
+          <linearGradient id="stepGreen" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#84cc16" />
+            <stop offset="100%" stopColor="#4d7c0f" />
+          </linearGradient>
+          <linearGradient id="stepTeal" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#0d9488" />
+            <stop offset="100%" stopColor="#115e59" />
           </linearGradient>
 
-          {/* 불 Gradient (Luminous Electric Cyan/Aqua) */}
-          <linearGradient id="boolCharGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#67e8f9" />
-            <stop offset="35%" stopColor="#22d3ee" />
-            <stop offset="75%" stopColor="#06b6d4" />
-            <stop offset="100%" stopColor="#0284c7" />
-          </linearGradient>
-
-          {/* 포 Gradient (Platinum White) */}
-          <linearGradient id="poCharGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="80%" stopColor="#f1f5f9" />
-            <stop offset="100%" stopColor="#e2e8f0" />
-          </linearGradient>
-
-          {/* 차 Gradient (Warm White to Coral Orange) */}
-          <linearGradient id="chaCharGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="70%" stopColor="#fed7aa" />
-            <stop offset="100%" stopColor="#fdba74" />
-          </linearGradient>
-
-          {/* Swirl Badge Gradients */}
-          <linearGradient id="swirlBoxGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#083344" />
-            <stop offset="100%" stopColor="#0e7490" />
-          </linearGradient>
-          <linearGradient id="swirlLineGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#a5f3fc" />
-            <stop offset="50%" stopColor="#22d3ee" />
-            <stop offset="100%" stopColor="#06b6d4" />
-          </linearGradient>
-
-          {/* 5-Color Bar Segments */}
-          <linearGradient id="bar1" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#06b6d4" />
-            <stop offset="100%" stopColor="#0ea5e9" />
-          </linearGradient>
-          <linearGradient id="bar2" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#0284c7" />
-            <stop offset="100%" stopColor="#2563eb" />
-          </linearGradient>
-          <linearGradient id="bar3" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#4338ca" />
-            <stop offset="100%" stopColor="#6b21a8" />
-          </linearGradient>
-          <linearGradient id="bar4" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#86198f" />
-            <stop offset="100%" stopColor="#c026d3" />
-          </linearGradient>
-          <linearGradient id="bar5" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#e11d48" />
-            <stop offset="100%" stopColor="#f97316" />
-          </linearGradient>
-
-          {/* Purple Gem Gradient for 포 */}
-          <radialGradient id="purpleGemGrad" cx="35%" cy="35%" r="65%">
-            <stop offset="0%" stopColor="#f3e8ff" />
-            <stop offset="30%" stopColor="#c084fc" />
-            <stop offset="75%" stopColor="#9333ea" />
-            <stop offset="100%" stopColor="#6b21a8" />
-          </radialGradient>
-
-          {/* Orange Spark Gradient for 차 */}
-          <radialGradient id="orangeSparkGrad" cx="35%" cy="35%" r="65%">
-            <stop offset="0%" stopColor="#ffedd5" />
-            <stop offset="40%" stopColor="#fb923c" />
-            <stop offset="85%" stopColor="#ea580c" />
-            <stop offset="100%" stopColor="#c2410c" />
+          {/* Fresh Green Dot on '포' */}
+          <radialGradient id="greenSproutDot" cx="35%" cy="35%" r="65%">
+            <stop offset="0%" stopColor="#bef264" />
+            <stop offset="50%" stopColor="#84cc16" />
+            <stop offset="100%" stopColor="#4d7c0f" />
           </radialGradient>
         </defs>
 
         {/* ========================================================= */}
-        {/* LEFT BLOCK: [어따써] + [회오리 엠블럼] + [5색 바] + [서브타이틀] */}
+        {/* LEFT SECTION: [어따써] + [빨간 직인] + [4색 계단 바] + [숯불 꼼장어 전문점] */}
         {/* ========================================================= */}
-        <g id="left-block" filter="url(#solidShadow)">
-          {/* 어따써 Main Text (Enlarged, Extra Bold, Crystal Clear) */}
+        <g id="left-section" filter="url(#logoShadow)">
+          {/* 어따써 - 원본 캘리그라피와 동일한 검정/먹색 브러시 텍스트 */}
           <text
-            x="8"
-            y="54"
-            fontFamily="'Do Hyeon', 'Black Han Sans', 'Noto Sans KR', sans-serif"
-            fontSize="54"
+            x="14"
+            y="76"
+            fontFamily="'Gaegu', 'Dongle', 'Do Hyeon', 'Noto Sans KR', sans-serif"
+            fontSize="68"
             fontWeight="900"
-            letterSpacing="2"
-            fill="url(#eottaTextGrad)"
-            stroke="#090d16"
-            strokeWidth="3.5"
+            letterSpacing="-1"
+            fill="#ffffff"
+            stroke="#1c1917"
+            strokeWidth="4"
             paintOrder="stroke fill"
           >
             어따써
           </text>
 
-          {/* Swirl Badge (Top-Right of 어따써) */}
-          <g id="swirl-badge" transform="translate(198, 14)">
+          {/* 원본의 '써' 위 빨간 직인 낙관 */}
+          <g id="seal-stamp" transform="translate(204, 18)">
             <rect
               x="0"
               y="0"
-              width="32"
-              height="32"
-              rx="8"
-              fill="url(#swirlBoxGrad)"
-              stroke="#22d3ee"
-              strokeWidth="1.8"
+              width="26"
+              height="26"
+              rx="6"
+              fill="url(#sealGrad)"
+              stroke="#fca5a5"
+              strokeWidth="1.5"
             />
-            {/* Swirl Vortex */}
+            {/* 직인 안의 하얀 문양 */}
             <path
-              d="M16 7 C10 7 6.5 11 6.5 16 C6.5 21.5 11 25.5 16.5 25.5 C21.5 25.5 24.5 22 24 17 C23.5 13 20 11 16.5 11.5 C13.5 12 11.5 14.5 12 17 C12.5 19.5 14.5 20.5 16.5 20 C18 19.5 19 18 18.5 16.5 C18 15.5 17 15 16 15.5"
+              d="M13 6 C8 6 6 9.5 6 13 C6 17 9.5 20 13.5 20 C17.5 20 20 17 19.5 13.5 C19 10.5 16.5 9 13.5 9.5 C11 10 9.5 12 10 14 C10.5 15.5 12 16.5 13.5 16 C14.5 15.5 15 14.5 14.5 13.5"
               fill="none"
-              stroke="url(#swirlLineGrad)"
-              strokeWidth="2.8"
+              stroke="#ffffff"
+              strokeWidth="2.2"
               strokeLinecap="round"
             />
-            <circle cx="16" cy="16" r="1.5" fill="#ffffff" />
           </g>
 
-          {/* 5-Color Brush Palette Bar (Enlarged & Vivid) */}
-          <g id="five-color-bar" transform="translate(8, 66)">
-            {/* Shadow Base */}
-            <rect x="0" y="0" width="224" height="13" rx="3" fill="#090d16" />
-            {/* 5 Segments */}
-            <rect x="0" y="0" width="46" height="12" rx="3" fill="url(#bar1)" />
-            <rect x="44" y="0" width="46" height="12" fill="url(#bar2)" />
-            <rect x="88" y="0" width="46" height="12" fill="url(#bar3)" />
-            <rect x="132" y="0" width="46" height="12" fill="url(#bar4)" />
-            <path
-              d="M176 0 L220 0 Q225 0 224 6 Q223 12 218 12 L176 12 Z"
-              fill="url(#bar5)"
-            />
-            {/* Texture light lines on bar */}
-            <line x1="20" y1="2.5" x2="40" y2="2.5" stroke="#ffffff" strokeWidth="1.2" strokeOpacity="0.5" strokeLinecap="round" />
-            <line x1="95" y1="2.5" x2="120" y2="2.5" stroke="#ffffff" strokeWidth="1.2" strokeOpacity="0.4" strokeLinecap="round" />
-            <line x1="185" y1="2.5" x2="215" y2="2.5" stroke="#ffffff" strokeWidth="1.2" strokeOpacity="0.5" strokeLinecap="round" />
+          {/* 4색 계단형 팔레트 (빨강 - 주황 - 연두 - 청록) */}
+          <g id="stepped-color-bar" transform="translate(14, 94)">
+            <path d="M0 6 L44 5 L44 22 L0 23 Z" fill="url(#stepRed)" stroke="#1c1917" strokeWidth="1.5" />
+            <path d="M44 5 L88 3 L88 20 L44 22 Z" fill="url(#stepYellow)" stroke="#1c1917" strokeWidth="1.5" />
+            <path d="M88 3 Q110 2 136 0 L142 0 L142 17 L88 20 Z" fill="url(#stepGreen)" stroke="#1c1917" strokeWidth="1.5" />
+            <path d="M142 7 L190 8 L190 17 L142 17 Z" fill="url(#stepTeal)" stroke="#1c1917" strokeWidth="1.5" />
           </g>
 
-          {/* Subtitle: 숯불 꼼장어 전문점 */}
+          {/* 하단 설명: 숯불 꼼장어 전문점 */}
           {showSubtitle && (
             <text
-              x="10"
-              y="102"
+              x="22"
+              y="142"
               fontFamily="'Pretendard', 'Noto Sans KR', sans-serif"
-              fontSize="16"
+              fontSize="20"
               fontWeight="800"
-              letterSpacing="3.5"
+              letterSpacing="2.5"
               fill="#e2e8f0"
-              stroke="#090d16"
+              stroke="#0f172a"
               strokeWidth="2"
               paintOrder="stroke fill"
             >
@@ -207,119 +128,150 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         </g>
 
         {/* ========================================================= */}
-        {/* RIGHT BLOCK: [숯] [불] [포] [차] - Enlarged, 100% Legible */}
+        {/* RIGHT SECTION: [숯] [불] [포] [차] + [사천점] 캡슐 */}
+        {/* 인위적인 짝대기 없이, 원본 글자 그대로 선명하게 살림 */}
         {/* ========================================================= */}
-        <g id="right-block" filter="url(#solidShadow)">
-          {/* 1. 숯 (Deep Royal Blue to Electric Blue with ㅊ 받침) */}
-          <g id="char-sooth-unit">
+        <g id="right-section" filter="url(#logoShadow)">
+          {/* 1. 숯 : 글씨가 선명하게 또렷이 보이도록 깨끗한 화이트/골드 엣지 적용 */}
+          <g id="char-sooth">
             <text
-              x="255"
-              y="82"
-              fontFamily="'Do Hyeon', 'Black Han Sans', 'Noto Sans KR', sans-serif"
-              fontSize="84"
+              x="272"
+              y="108"
+              fontFamily="'Gaegu', 'Black Han Sans', 'Do Hyeon', 'Noto Sans KR', sans-serif"
+              fontSize="106"
               fontWeight="900"
-              fill="url(#soothCharGrad)"
-              stroke="#091428"
-              strokeWidth="5"
+              fill="#fbbf24"
+              stroke="#1c1917"
+              strokeWidth="6"
               paintOrder="stroke fill"
             >
               숯
             </text>
-            {/* Light streak highlight across the middle horizontal stroke of 숯 */}
-            <path
-              d="M266 52 Q285 50 318 52"
-              stroke="#ffffff"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeOpacity="0.8"
-            />
+            {/* 안쪽 텍스트를 한 번 더 얹어서 획이 어두운 배경에서도 선명하게 강조 */}
+            <text
+              x="272"
+              y="108"
+              fontFamily="'Gaegu', 'Black Han Sans', 'Do Hyeon', 'Noto Sans KR', sans-serif"
+              fontSize="106"
+              fontWeight="900"
+              fill="#ffffff"
+            >
+              숯
+            </text>
+            {/* 원본 '숯'의 황금빛 브러시 컬러링 */}
+            <text
+              x="272"
+              y="108"
+              fontFamily="'Gaegu', 'Black Han Sans', 'Do Hyeon', 'Noto Sans KR', sans-serif"
+              fontSize="106"
+              fontWeight="900"
+              fill="#f59e0b"
+              opacity="0.85"
+            >
+              숯
+            </text>
           </g>
 
-          {/* 2. 불 (Vivid Electric Cyan Turquoise Centerpiece) */}
-          <g id="char-bool-unit" filter="url(#cyanNeonGlow)">
+          {/* 2. 불 : '불' 글씨 그대로, 받침 부분의 붉은 불꽃 포인트 */}
+          <g id="char-bool">
             <text
-              x="362"
-              y="82"
-              fontFamily="'Do Hyeon', 'Black Han Sans', 'Noto Sans KR', sans-serif"
-              fontSize="84"
+              x="396"
+              y="108"
+              fontFamily="'Gaegu', 'Black Han Sans', 'Do Hyeon', 'Noto Sans KR', sans-serif"
+              fontSize="106"
               fontWeight="900"
-              fill="url(#boolCharGrad)"
-              stroke="#082838"
-              strokeWidth="5"
+              fill="#ffffff"
+              stroke="#1c1917"
+              strokeWidth="6"
               paintOrder="stroke fill"
             >
               불
             </text>
-            {/* Gloss highlight on ㅂ */}
-            <path
-              d="M374 24 L374 48"
-              stroke="#ffffff"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeOpacity="0.8"
-            />
+            {/* 하단 붉은 붓터치 강조 */}
+            <text
+              x="396"
+              y="108"
+              fontFamily="'Gaegu', 'Black Han Sans', 'Do Hyeon', 'Noto Sans KR', sans-serif"
+              fontSize="106"
+              fontWeight="900"
+              fill="#ef4444"
+              clipPath="url(#boolLowerClip2)"
+            >
+              불
+            </text>
+            <clipPath id="boolLowerClip2">
+              <rect x="390" y="78" width="100" height="60" />
+            </clipPath>
           </g>
 
-          {/* 3. 포 (Crisp White with Signature Purple Gem inside ㅍ) */}
-          <g id="char-po-unit">
+          {/* 3. 포 : 또렷한 화이트 글씨 + 원본의 초록 열매 포인트 */}
+          <g id="char-po">
             <text
-              x="470"
-              y="82"
-              fontFamily="'Do Hyeon', 'Black Han Sans', 'Noto Sans KR', sans-serif"
-              fontSize="84"
+              x="512"
+              y="108"
+              fontFamily="'Gaegu', 'Black Han Sans', 'Do Hyeon', 'Noto Sans KR', sans-serif"
+              fontSize="106"
               fontWeight="900"
-              fill="url(#poCharGrad)"
-              stroke="#0f172a"
-              strokeWidth="5"
+              fill="#ffffff"
+              stroke="#1c1917"
+              strokeWidth="6"
               paintOrder="stroke fill"
             >
               포
             </text>
-            {/* Iconic Purple Jewel inside ㅍ */}
-            <g id="purple-gem" transform="translate(506, 33)">
-              <circle
-                cx="0"
-                cy="0"
-                r="8"
-                fill="url(#purpleGemGrad)"
-                stroke="#c084fc"
-                strokeWidth="1.8"
-              />
-              <circle cx="-2.5" cy="-2.5" r="2.2" fill="#ffffff" />
-            </g>
+            {/* 초록색 열매/새싹 포인트 */}
+            <circle
+              cx="548"
+              cy="62"
+              r="7.5"
+              fill="url(#greenSproutDot)"
+              stroke="#27272a"
+              strokeWidth="1.5"
+            />
+            <ellipse cx="546" cy="60" rx="2.5" ry="1.5" fill="#f7fee7" />
           </g>
 
-          {/* 4. 차 (Warm Crisp White with Flame Orange Accent on ㅊ) */}
-          <g id="char-cha-unit">
+          {/* 4. 차 : 또렷한 화이트 붓글씨 */}
+          <g id="char-cha">
             <text
-              x="575"
-              y="82"
-              fontFamily="'Do Hyeon', 'Black Han Sans', 'Noto Sans KR', sans-serif"
-              fontSize="84"
+              x="626"
+              y="108"
+              fontFamily="'Gaegu', 'Black Han Sans', 'Do Hyeon', 'Noto Sans KR', sans-serif"
+              fontSize="106"
               fontWeight="900"
-              fill="url(#chaCharGrad)"
-              stroke="#18120c"
-              strokeWidth="5"
+              fill="#ffffff"
+              stroke="#1c1917"
+              strokeWidth="6"
               paintOrder="stroke fill"
             >
               차
             </text>
-            {/* Flame Orange Spark on top of ㅊ */}
-            <g id="orange-spark" transform="translate(607, 16)" filter="url(#orangeNeonGlow)">
-              <circle
-                cx="0"
-                cy="0"
-                r="7"
-                fill="url(#orangeSparkGrad)"
-                stroke="#fed7aa"
-                strokeWidth="1.5"
-              />
-              <path
-                d="M-2 -2 Q0 -6 2 -2 Q5 2 0 4 Q-4 2 -2 -2 Z"
-                fill="#ffffff"
-                opacity="0.9"
-              />
-            </g>
+          </g>
+
+          {/* 5. 사천점 : 원본과 동일한 블랙 알약 캡슐 뱃지 */}
+          <g id="branch-badge" transform="translate(562, 126)">
+            <rect
+              x="0"
+              y="0"
+              width="134"
+              height="38"
+              rx="19"
+              fill="#09090b"
+              stroke="#52525b"
+              strokeWidth="2.5"
+            />
+            <text
+              x="67"
+              y="25"
+              textAnchor="middle"
+              fontFamily="'Pretendard', 'Noto Sans KR', sans-serif"
+              fontSize="19"
+              fontWeight="900"
+              letterSpacing="3"
+              fill="#ffffff"
+            >
+              사천점
+            </text>
           </g>
         </g>
       </svg>
