@@ -39,7 +39,7 @@ export const MENU_ITEMS: MenuItem[] = [
     pricePer100g: '100g 9,500원',
     description: '당일 엄선한 특대형 왕꼼장어를 참숯불에 직화로 구워 쫄깃하고 담백한 본연의 고소함이 일품인 대표 메뉴',
     tag: '대표 시그니처',
-    image: '/images/wang_fresh_eel_1789431357331.jpg',
+    image: '/images/wang_kkomjangeo_user.jpg',
     pairingNote: '기름소금장에 찍어 콩가루나 카레가루에 살짝 곁들이면 환상적입니다.',
   },
   {
@@ -79,7 +79,7 @@ export const MENU_ITEMS: MenuItem[] = [
     pricePer100g: '미국·호주산 100g 8,500원',
     description: '마블링이 곱게 퍼져 참숯불에 살짝 구워내면 사르르 녹아내리는 육즙 가득 프리미엄 생소갈비살',
     tag: '소고기 인기 ★',
-    image: '/images/fresh_beef_ribs_1789431371859.jpg',
+    image: '/images/saengsogalbisal_user.jpg',
     pairingNote: '참숯향이 은은하게 밴 소갈비살 본연의 육즙을 소금에 살짝 찍어 즐기세요.',
   },
   {
@@ -103,7 +103,7 @@ export const MENU_ITEMS: MenuItem[] = [
     pricePer100g: '국내산 100g 6,500원',
     description: '도축업자들이 너무 맛있어서 뒤로 빼돌려 허겁지겁 먹었다는 쫀득하고 육즙 풍부한 국내산 명품 뒷고기',
     tag: '강력추천 ★',
-    image: '/images/heogeopsal_meat_1789431384416.jpg',
+    image: '/images/heogeopsal_user.jpg',
     pairingNote: '와사비와 간장양파를 곁들이면 느끼함 없이 쫄깃함이 극대화됩니다.',
   },
   {
@@ -175,7 +175,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 2000,
     description: '기본 1회 무료 제공! 부드럽고 몽글몽글하게 부풀어 오른 뚝배기 폭탄 계란찜',
     tag: '기본제공 (추가 2천원)',
-    image: '/images/charcoal_grilled_cuts_1789293498240.jpg',
+    image: '/images/volcano_steamed_egg_1789442007487.jpg',
   },
   {
     id: 'side-cheonggukjang',
@@ -201,7 +201,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'drink',
     price: 2000,
     description: '시원한 탄산음료 (캔)',
-    image: '/images/korean_drinks_1789296441239.jpg',
+    image: '/images/soft_drinks_ice_1789441943880.jpg',
   },
   {
     id: 'drink-soju',
@@ -209,7 +209,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'drink',
     price: 4000,
     description: '숯불 꼼장어와 가장 잘 어울리는 대한민국 대표 소주',
-    image: '/images/korean_drinks_1789296441239.jpg',
+    image: '/images/soju_bottle_glass_1789441912759.jpg',
   },
   {
     id: 'drink-beer',
@@ -217,7 +217,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'drink',
     price: 4000,
     description: '시원한 청량감 가득 병맥주',
-    image: '/images/korean_drinks_1789296441239.jpg',
+    image: '/images/beer_bottle_glass_1789441932747.jpg',
   },
   {
     id: 'drink-makgeolli',
@@ -225,7 +225,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'drink',
     price: 4000,
     description: '톡 쏘는 탄산과 구수한 쌀 풍미',
-    image: '/images/korean_drinks_1789296441239.jpg',
+    image: '/images/makgeolli_bowl_1789441900759.jpg',
   },
   {
     id: 'drink-daepo',
@@ -233,7 +233,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'drink',
     price: 5000,
     description: '은은한 쌀 발효주 풍미의 포차 감성 전통주',
-    image: '/images/korean_drinks_1789296441239.jpg',
+    image: '/images/daepo_korean_wine_1789441996404.jpg',
   },
   {
     id: 'drink-cheongha',
@@ -241,7 +241,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'drink',
     price: 5000,
     description: '깔끔하고 맑은 청주',
-    image: '/images/korean_drinks_1789296441239.jpg',
+    image: '/images/cheongha_clear_wine_1789441965151.jpg',
   },
   {
     id: 'drink-bokbunja',
@@ -250,7 +250,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 12000,
     description: '기력 회복 꼼장어와 최고의 궁합을 자랑하는 진한 복분자주',
     tag: '보양 페어링',
-    image: '/images/korean_drinks_1789296441239.jpg',
+    image: '/images/bokbunja_ruby_wine_1789441983824.jpg',
   },
 ];
 
@@ -319,21 +319,21 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-1',
     title: '참숯 직화 꼼장어 & 허겁살 구이',
     category: '숯불구이',
-    src: '/images/heogeopsal_meat_1789430855574.jpg',
+    src: '/images/heogeopsal_user.jpg',
     description: '참숯 석쇠 위에서 노릇노릇하게 구워지는 왕꼼장어와 쫀득한 허겁살',
   },
   {
     id: 'gal-2',
     title: '당일 엄선 특대형 왕꼼장어 신선도',
     category: '신선 원육',
-    src: '/images/giant_fresh_eel_1789430840383.jpg',
+    src: '/images/wang_kkomjangeo_user.jpg',
     description: '살아 숨쉬는 듯한 탱탱한 윤기와 도톰한 두께를 자랑하는 명품 꼼장어 원육',
   },
   {
     id: 'gal-3',
     title: '참숯 직화 프리미엄 생소갈비살',
     category: '소고기 구이',
-    src: '/images/fresh_beef_ribs_1789430826446.jpg',
+    src: '/images/saengsogalbisal_user.jpg',
     description: '풍부한 마블링과 참숯 직화의 불향이 완벽히 어우러진 명품 생소갈비살',
   },
   {
