@@ -130,6 +130,13 @@ export const MenuSection: React.FC = () => {
                           </span>
                         )}
                       </div>
+                      {item.minOrderNotice && (
+                        <div className="mt-0.5">
+                          <span className="inline-block text-xs font-bold text-amber-400">
+                            {item.minOrderNotice}
+                          </span>
+                        </div>
+                      )}
                       {item.weight && (
                         <span className="text-[11px] text-sky-400 font-semibold block mt-0.5">
                           {item.weight}

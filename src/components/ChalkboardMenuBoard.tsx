@@ -104,6 +104,9 @@ export const ChalkboardMenuBoard: React.FC = () => {
                         <div className="text-white font-black text-base sm:text-lg tracking-wide">
                           야채꼼장어 <span className="text-xs sm:text-sm font-semibold text-sky-400">(200g)</span>
                         </div>
+                        <div className="text-[11px] font-bold text-amber-400 mt-0.5">
+                          2인분이상
+                        </div>
                         <div className="text-[11px] sm:text-xs text-sky-300/90 font-semibold mt-0.5">
                           (100g 9,500원)
                         </div>
@@ -374,8 +377,11 @@ export const ChalkboardMenuBoard: React.FC = () => {
                       <span>양념구이 <span className="text-sky-300 text-xs font-semibold">(100g 9,500원)</span></span>
                       <span className="text-amber-400 font-bold">₩19,000</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>야채꼼장어 <span className="text-sky-300 text-xs font-semibold">(100g 9,500원)</span></span>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <span>야채꼼장어 <span className="text-sky-300 text-xs font-semibold">(100g 9,500원)</span></span>
+                        <div className="text-[10px] font-bold text-amber-400">2인분이상</div>
+                      </div>
                       <span className="text-amber-400 font-bold">₩19,000</span>
                     </div>
                   </div>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="badgeBg" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#27272a" />
+      <stop offset="80%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </radialGradient>
+
+    <!-- Eel Skin Warm Charcoal Fire Gradient -->
+    <linearGradient id="eelBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b35" />
+      <stop offset="50%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+
+    <!-- Eel Belly Golden Warmth -->
+    <linearGradient id="eelBellyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#fde047" />
+    </linearGradient>
+
+    <!-- Royal Crown Gold Gradient -->
+    <linearGradient id="crownGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef9c3" />
+      <stop offset="40%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Circular Badge Backdrop -->
+  <circle cx="32" cy="32" r="30" fill="url(#badgeBg)" stroke="#f59e0b" stroke-width="2.5" />
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#f97316" stroke-width="0.8" opacity="0.4" />
+
+  <!-- 2. Dorsal Fin (등지느러미) Along Spine -->
+  <path d="M 23 20 C 12 24 10 37 17 45 C 24 53 37 54 44 47 C 49 42 50 34 46 27" 
+        fill="none" 
+        stroke="#fbbf24" 
+        stroke-width="11" 
+        stroke-linecap="round" 
+        opacity="0.35" />
+
+  <!-- 3. Main S-Curve Eel Body (통통한 꼼장어 몸통) -->
+  <path d="M 24 22 C 14 26 12 38 18 45 C 24 51 36 52 42 46 C 47 41 48 34 45 28 C 43 24 39 24 37 28" 
+        fill="none" 
+        stroke="#7c2d12" 
+        stroke-width="9.5" 
+        stroke-linecap="round" />
+
+  <path d="M 24 22 C 14 26 12 38 18 45 C 24 51 36 52 42 46 C 47 41 48 34 45 28 C 43 24 39 24 37 28" 
+        fill="none" 
+        stroke="url(#eelBodyGrad)" 
+        stroke-width="7.5" 
+        stroke-linecap="round" />
+
+  <!-- 4. Belly Accent Stripe (꼼장어 배 부분 밝은 하이라이트) -->
+  <path d="M 20 44 C 25 49 35 50 40 45" 
+        fill="none" 
+        stroke="url(#eelBellyGrad)" 
+        stroke-width="2.2" 
+        stroke-linecap="round" />
+
+  <!-- 5. Eel Tail Fin (꼬리지느러미) -->
+  <path d="M 37 28 Q 35 24 32 25 Q 36 29 37 31 Z" fill="#f59e0b" />
+
+  <!-- 6. Eel Head (도톰하고 귀여운 왕꼼장어 머리) -->
+  <circle cx="25" cy="22" r="5" fill="url(#eelBodyGrad)" stroke="#7c2d12" stroke-width="0.8" />
+  
+  <!-- Barbels / Whiskers (꼼장어 특유의 주둥이 수염 감각) -->
+  <path d="M 29 23 Q 32 23 34 25" fill="none" stroke="#fde047" stroke-width="1.2" stroke-linecap="round" />
+  <path d="M 28 25 Q 30 27 32 28" fill="none" stroke="#fde047" stroke-width="1" stroke-linecap="round" />
+
+  <!-- Big Clear Eye (멀리서도 꼼장어로 또렷하게 보이는 눈) -->
+  <circle cx="26.5" cy="20.5" r="2" fill="#ffffff" />
+  <circle cx="27.2" cy="20.5" r="1.1" fill="#09090b" />
+  <circle cx="27.6" cy="20.1" r="0.4" fill="#ffffff" />
+
+  <!-- Cheerful Mouth -->
+  <path d="M 27 24 Q 28 25.5 29.5 24" fill="none" stroke="#7c2d12" stroke-width="0.8" stroke-linecap="round" />
+
+  <!-- 7. King's Crown (머리 위 황금 왕관 - 직관적인 '왕' 상징) -->
+  <g transform="translate(16, 8)">
+    <!-- Crown Base & Points -->
+    <path d="M 3 8 L 4 3 L 8 6 L 12 1 L 16 6 L 20 3 L 21 8 Z" 
+          fill="url(#crownGrad)" 
+          stroke="#78350f" 
+          stroke-width="1" 
+          stroke-linejoin="round" />
+    <!-- Crown Jewels (Red & Blue Jewels) -->
+    <circle cx="12" cy="3.5" r="1.3" fill="#ef4444" stroke="#78350f" stroke-width="0.4" />
+    <circle cx="4.5" cy="4.5" r="0.9" fill="#38bdf8" />
+    <circle cx="19.5" cy="4.5" r="0.9" fill="#38bdf8" />
+    <!-- Crown Band Trim -->
+    <rect x="3" y="7" width="18" height="1.8" rx="0.8" fill="#f59e0b" stroke="#78350f" stroke-width="0.5" />
+    <circle cx="7" cy="7.9" r="0.5" fill="#ffffff" />
+    <circle cx="12" cy="7.9" r="0.5" fill="#ffffff" />
+    <circle cx="17" cy="7.9" r="0.5" fill="#ffffff" />
+  </g>
+
+  <!-- 8. Charcoal Ember Sparkles (숯불 불꽃 반짝임) -->
+  <path d="M 48 18 Q 49 14 51 17 Q 52 13 54 16 Q 52 20 48 18 Z" fill="#fbbf24" opacity="0.9" />
+</svg>

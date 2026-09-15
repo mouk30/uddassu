@@ -12,6 +12,7 @@ export interface MenuItem {
   isSpicy?: boolean;
   image?: string;
   pairingNote?: string;
+  minOrderNotice?: string;
 }
 
 export interface SetMenuItem {

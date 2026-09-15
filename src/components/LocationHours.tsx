@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { MapPin, Clock, Phone, Navigation, Copy, Check, Car, Users, Sparkles, ExternalLink, Flame } from 'lucide-react';
+import { MapPin, Clock, Phone, Navigation, Copy, Check, Car, Users, Sparkles, Flame } from 'lucide-react';
 import { STORE_INFO } from '../data/restaurantData';
 
 export const LocationHours: React.FC = () => {
@@ -155,29 +155,6 @@ export const LocationHours: React.FC = () => {
                     </>
                   )}
                 </button>
-              </div>
-
-              {/* Map App Shortcuts */}
-              <div className="grid grid-cols-2 gap-3 pt-1">
-                <a
-                  href="https://map.naver.com/v5/search/%EC%96%B4%EB%94%B0%EC%8D%A8%EC%88%AF%EB%B6%88%ED%8F%AC%EC%83%88%20%EC%B2%AD%EC%A3%BC%EC%82%AC%EC%82%AC%EC%B2%9C%EC%A0%90"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#03C75A]/15 hover:bg-[#03C75A]/25 border border-[#03C75A]/40 text-[#03C75A] font-bold text-xs transition-colors"
-                >
-                  <span>네이버 지도 길찾기</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-
-                <a
-                  href="https://map.kakao.com/?q=%EC%96%B4%EB%94%B0%EC%8D%A8%EC%88%AF%EB%B6%88%ED%8F%AC%EC%83%88%20%EC%B2%AD%EC%A3%BC"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#FEE500]/15 hover:bg-[#FEE500]/25 border border-[#FEE500]/40 text-[#FFD700] font-bold text-xs transition-colors"
-                >
-                  <span>카카오맵 길찾기</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
               </div>
             </div>
           </div>
