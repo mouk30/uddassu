@@ -32,19 +32,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
         {/* Grand Opening Announcement Banner Bar */}
         <div
           id="opening-announcement-banner"
-          className="w-full max-w-lg mx-auto mb-5 px-4 py-2.5 sm:py-3 rounded-2xl bg-gradient-to-r from-red-950/80 via-amber-950/90 to-red-950/80 border-2 border-amber-500/70 shadow-[0_0_25px_rgba(245,158,11,0.25)] backdrop-blur-md flex items-center justify-center gap-2.5 text-center animate-pulse duration-3000"
+          className="w-full max-w-xl mx-auto mb-5 px-5 py-3 sm:py-3.5 rounded-2xl bg-gradient-to-r from-red-950/90 via-amber-950/95 to-red-950/90 border-2 border-amber-500/80 shadow-[0_0_25px_rgba(245,158,11,0.25)] backdrop-blur-md flex items-center justify-center gap-3 text-center"
         >
-          <span className="flex h-2.5 w-2.5 relative shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
-          </span>
-          <span className="text-sm sm:text-base font-extrabold text-white tracking-wide">
-            <span className="text-amber-300 font-black text-base sm:text-lg underline decoration-amber-400 decoration-2 underline-offset-4">
+          <span className="text-base sm:text-xl font-extrabold text-white tracking-wide">
+            <span className="text-amber-300 font-black text-lg sm:text-2xl underline decoration-amber-400 decoration-2 underline-offset-4 mr-1">
               9월 28일
             </span>
-            {' '}영업시작
+            영업시작
           </span>
-          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-amber-500 text-neutral-950 shadow-sm shrink-0">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs sm:text-sm font-black bg-amber-500 text-neutral-950 shadow-md shrink-0">
             오픈준비중
           </span>
         </div>
