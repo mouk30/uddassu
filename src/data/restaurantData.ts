@@ -144,7 +144,7 @@ export const MENU_ITEMS: MenuItem[] = [
     id: 'side-warm-noodle',
     name: '온소면',
     category: 'side',
-    price: 5000,
+    price: 6000,
     description: '따끈하고 깊은 멸치 디포리 육수에 쫄깃한 소면을 말아낸 훈훈한 잔치국수 스타일',
     image: '/images/warm_somyeon.jpg',
     pairingNote: '쌀쌀한 밤 포차 감성을 제대로 채워주는 온기 가득 국수',
