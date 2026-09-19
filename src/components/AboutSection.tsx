@@ -27,8 +27,8 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-6 relative group">
             <div className="relative rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-950">
               <img
-                src="/images/wang_kkomjangeo_user.jpg"
-                alt="어따써 특대형 왕꼼장어 원육 신선함"
+                src="/images/wang_salt_eel.jpg"
+                alt="어따써 특대형 왕 소금구이 꼼장어 노릇한 참숯 구이"
                 referrerPolicy="no-referrer"
                 className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-103 transition-transform duration-700"
               />
@@ -37,7 +37,7 @@ export const AboutSection: React.FC = () => {
               {/* Overlay Badge */}
               <div className="absolute top-4 left-4 bg-neutral-900/90 backdrop-blur-md border border-amber-500/30 px-3.5 py-1.5 rounded-xl shadow-lg flex items-center gap-2 text-xs font-bold text-amber-300">
                 <Award className="w-4 h-4 text-amber-400" />
-                <span>당일 엄선 특대형 왕꼼장어</span>
+                <span>당일 엄선 특대형 왕 소금구이 꼼장어</span>
               </div>
 
               {/* Bottom Caption Box */}

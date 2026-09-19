@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="60%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#040404" />
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Card Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#52525b" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.7" />
+    </linearGradient>
+
+    <!-- Subtle Glow Shadow -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#f59e0b" flood-opacity="0.1" />
+    </filter>
+
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-title { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-weight: 900; }
+    .font-sub { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-weight: 700; }
+    .font-body { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; font-weight: 500; }
+    .font-num { font-family: 'Montserrat', 'Pretendard', sans-serif; font-weight: 700; }
+  </style>
+
+  <!-- Outer Canvas Margin / Presentation Frame -->
+  <rect width="1000" height="600" fill="#09090b" />
+
+  <!-- Main Card Body (900 x 520, 9:5.2 Ratio - Classic Business Card Proportion) -->
+  <rect x="50" y="40" width="900" height="520" rx="24" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="2.5" filter="url(#cardShadow)" />
+
+  <!-- Background Subtle Design Elements: Geometric Line & Charcoal Texture Accent -->
+  <circle cx="860" cy="90" r="180" fill="none" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.08" />
+  <circle cx="860" cy="90" r="260" fill="none" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.04" />
+  <line x1="90" y1="210" x2="850" y2="210" stroke="#3f3f46" stroke-width="1" stroke-dasharray="6 4" stroke-opacity="0.6" />
+
+  <!-- ================= TOP SECTION: LOGO & BRAND IDENTITY ================= -->
+  <g transform="translate(90, 80)">
+    <!-- Brand Name Group -->
+    <g transform="translate(0, 0)">
+      <!-- Main Logo Text: 어따써 -->
+      <text x="0" y="48" class="font-title" font-size="46" letter-spacing="-1" fill="#ffffff">어따써</text>
+      
+      <!-- Red Traditional Seal Stamp (직인) -->
+      <rect x="145" y="16" width="30" height="30" rx="7" fill="#dc2626" />
+      <text x="160" y="38" text-anchor="middle" class="font-sub" font-size="17" font-weight="900" fill="#ffffff">福</text>
+      
+      <!-- 4-Color Staircase Graphic Bars (어따써 정통 시그니처 바) -->
+      <rect x="2" y="60" width="30" height="7" rx="3" fill="#ef4444" />
+      <rect x="36" y="57" width="30" height="10" rx="3" fill="#f97316" />
+      <rect x="70" y="54" width="30" height="13" rx="3" fill="#eab308" />
+      <rect x="104" y="51" width="30" height="16" rx="3" fill="#10b981" />
+
+      <!-- Subtitle Under Bar -->
+      <text x="2" y="86" class="font-sub" font-size="14" fill="#a1a1aa" letter-spacing="1">숯불 꼼장어 전문점</text>
+    </g>
+
+    <!-- 숯불 포차 Text -->
+    <g transform="translate(205, 0)">
+      <!-- 숯 (Gold) -->
+      <text x="0" y="50" class="font-title" font-size="48" fill="#fbbf24">숯</text>
+      <!-- 불 (Flame Red/Orange) -->
+      <text x="56" y="50" class="font-title" font-size="48" fill="#f87171">불</text>
+      <!-- 포차 (Clean White) -->
+      <text x="114" y="50" class="font-title" font-size="48" fill="#ffffff">포</text>
+      <text x="170" y="50" class="font-title" font-size="48" fill="#ffffff">차</text>
+
+      <!-- 사천점 Pill Badge -->
+      <rect x="135" y="62" width="76" height="24" rx="12" fill="#27272a" stroke="#d97706" stroke-width="1.2" />
+      <text x="173" y="78" text-anchor="middle" class="font-sub" font-size="12" fill="#fbbf24" letter-spacing="1">청주사천점</text>
+    </g>
+  </g>
+
+  <!-- Top Right QR Code / Tagline Badge -->
+  <g transform="translate(680, 80)">
+    <rect x="0" y="0" width="170" height="74" rx="14" fill="#1c1917" stroke="#44403c" stroke-width="1" />
+    <text x="85" y="32" text-anchor="middle" class="font-sub" font-size="14" fill="#fbbf24">참숯 직화구이</text>
+    <text x="85" y="54" text-anchor="middle" class="font-body" font-size="12" fill="#d6d3d1">왕꼼장어 · 소갈비살 · 허겁살</text>
+  </g>
+
+  <!-- ================= MIDDLE SECTION: REPRESENTATIVE NAME ================= -->
+  <g transform="translate(90, 260)">
+    <text x="0" y="34" class="font-body" font-size="18" fill="#a1a1aa" letter-spacing="4">대표</text>
+    <text x="75" y="34" class="font-title" font-size="38" fill="#ffffff" letter-spacing="3">서 선 원</text>
+    
+    <!-- Gold accent underline under name -->
+    <rect x="75" y="46" width="130" height="3.5" rx="1.5" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- ================= BOTTOM SECTION: CONTACT & STORE INFO ================= -->
+  <g transform="translate(90, 345)">
+    <!-- 1. PHONE -->
+    <g transform="translate(0, 0)">
+      <!-- Circle Icon Background -->
+      <circle cx="20" cy="20" r="20" fill="#27272a" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.6" />
+      <!-- Phone Icon SVG -->
+      <path d="M15 13a2 2 0 0 1 2-2h1.5a1.5 1.5 0 0 1 1.5 1.2c.2 1.1.7 2.1 1.4 3 .2.3.2.7 0 1l-1 1a10.5 10.5 0 0 0 4.4 4.4l1-1c.3-.2.7-.2 1 0 .9.7 1.9 1.2 3 1.4a1.5 1.5 0 0 1 1.2 1.5V29a2 2 0 0 1-2 2h-1C19.8 31 13 24.2 13 16v-1a2 2 0 0 1 2-2Z" fill="#fbbf24" transform="scale(0.8) translate(3, 3)" />
+      
+      <text x="56" y="16" class="font-body" font-size="14" fill="#a1a1aa">예약 및 문의</text>
+      <text x="56" y="36" class="font-num" font-size="24" fill="#fef08a" letter-spacing="1">010-7795-0918</text>
+    </g>
+
+    <!-- 2. EMAIL -->
+    <g transform="translate(0, 68)">
+      <!-- Circle Icon Background -->
+      <circle cx="20" cy="20" r="20" fill="#27272a" stroke="#52525b" stroke-width="1.2" />
+      <!-- Mail Icon SVG -->
+      <rect x="10" y="12" width="20" height="15" rx="2" fill="none" stroke="#fbbf24" stroke-width="1.8" />
+      <path d="M10 14l10 7 10-7" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+
+      <text x="56" y="16" class="font-body" font-size="13" fill="#a1a1aa">이메일</text>
+      <text x="56" y="34" class="font-sub" font-size="18" fill="#f4f4f5">ssw_tjsdnjs1@naver.com</text>
+    </g>
+
+    <!-- 3. HOURS (Right Column) -->
+    <g transform="translate(430, 0)">
+      <!-- Circle Icon Background -->
+      <circle cx="20" cy="20" r="20" fill="#27272a" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.6" />
+      <!-- Clock Icon SVG -->
+      <circle cx="20" cy="20" r="9" fill="none" stroke="#fbbf24" stroke-width="2" />
+      <polyline points="20 15 20 20 24 22" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" />
+
+      <text x="56" y="16" class="font-body" font-size="14" fill="#a1a1aa">영업시간</text>
+      <text x="56" y="36" class="font-sub" font-size="20" fill="#ffffff">
+        <tspan fill="#fbbf24" font-weight="900">월 ~ 토</tspan> 16:00 ~ 24:00
+      </text>
+      <text x="56" y="58" class="font-body" font-size="13" fill="#f87171">※ 매주 일요일 정기휴무</text>
+    </g>
+
+    <!-- 4. LOCATION (Right Column Bottom) -->
+    <g transform="translate(430, 75)">
+      <!-- Circle Icon Background -->
+      <circle cx="20" cy="20" r="20" fill="#27272a" stroke="#52525b" stroke-width="1.2" />
+      <!-- Map Pin Icon SVG -->
+      <path d="M20 10a6 6 0 0 0-6 6c0 4.5 6 11 6 11s6-6.5 6-11a6 6 0 0 0-6-6Zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" fill="#fbbf24" />
+
+      <text x="56" y="16" class="font-body" font-size="13" fill="#a1a1aa">매장 위치</text>
+      <text x="56" y="34" class="font-sub" font-size="16" fill="#f4f4f5">충북 청주시 청원구 율천북로 179 (사천동)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Right Decorative Watermark / Gold Bar -->
+  <rect x="50" y="555" width="900" height="5" fill="url(#goldGrad)" rx="2.5" />
+</svg>

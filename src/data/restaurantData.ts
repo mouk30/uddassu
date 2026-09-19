@@ -38,7 +38,7 @@ export const MENU_ITEMS: MenuItem[] = [
     pricePer100g: '100g 9,500원',
     description: '당일 엄선한 특대형 왕꼼장어를 참숯불에 직화로 구워 쫄깃하고 담백한 본연의 고소함이 일품인 대표 메뉴',
     tag: '대표 시그니처',
-    image: '/images/wang_kkomjangeo_user.jpg',
+    image: '/images/wang_salt_eel.jpg',
     pairingNote: '기름소금장에 찍어 콩가루나 카레가루에 살짝 곁들이면 환상적입니다.',
   },
   {
@@ -51,7 +51,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: '어따써 특제 매콤달콤 비법 양념을 듬뿍 발라 숯불에 노릇하게 구워낸 중독성 강한 양념 꼼장어',
     tag: '매콤 인기',
     isSpicy: true,
-    image: '/images/spicy_seasoned_eel_1789293478358.jpg',
+    image: '/images/yangnyeom_eel.jpg',
     pairingNote: '신선한 깻잎과 양파절임에 싸서 소주 한 잔과 곁들이는 최고의 술안주',
   },
   {
@@ -65,7 +65,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: '호일 팬 위에서 양파, 대파, 청양고추와 특제 양념으로 자작하게 볶아내어 볶음밥까지 즐길 수 있는 별미',
     tag: '볶음밥 필수',
     isSpicy: true,
-    image: '/images/spicy_seasoned_eel_1789293478358.jpg',
+    image: '/images/vegetable_eel.jpg',
     pairingNote: '마지막에 남은 양념에 볶음밥(5,000원)을 볶아 드시면 완벽한 코스입니다.',
   },
 
@@ -91,7 +91,7 @@ export const MENU_ITEMS: MenuItem[] = [
     pricePer100g: '미국·호주산 100g 8,500원',
     description: '어따써 특제 감칠맛 비법 양념에 재워 부드러운 육질과 풍부한 단짠 풍미가 살아있는 소갈비살',
     tag: '단짠 별미',
-    image: '/images/la_beef_ribs_1789296302367.jpg',
+    image: '/images/yangnyeom_beef_ribs.jpg',
     pairingNote: '노릇하게 구워 와사비나 양파절임과 함께 드시면 느끼함 없이 무한 흡입 가능합니다.',
   },
   {
@@ -115,7 +115,7 @@ export const MENU_ITEMS: MenuItem[] = [
     pricePer100g: '국내산 100g 5,500원',
     description: '콜라겐 듬뿍! 숯불에 바삭하고 쫀득하게 구워 매콤소스와 콩가루에 찍어먹는 포차 최고의 술안주',
     tag: '별미 추가메뉴',
-    image: '/images/grilled_pork_tail_1789443130195.jpg',
+    image: '/images/grilled_pork_tail.jpg',
     pairingNote: '고소한 콩가루와 특제 매콤 소스를 콕 찍어 쫀득바삭한 식감을 느껴보세요.',
   },
 
@@ -125,9 +125,9 @@ export const MENU_ITEMS: MenuItem[] = [
     name: '청국장술밥',
     category: 'side',
     price: 4000,
-    description: '구수하고 진한 시골 청국장에 밥과 두부를 말아 뚝배기 가득 끓여낸 어따써 시그니처 든든 술밥',
+    description: '구수하고 진한 시골 청국장 뚝배기에 공기밥이 함께 제공되어 말아먹는 어따써 시그니처 든든 술밥',
     tag: '필수주문 ★',
-    image: '/images/cheongguk_soolbap_1789296362889.jpg',
+    image: '/images/cheongguk_soolbap_combined.jpg',
     pairingNote: '고기 다 드시고 술 한 잔 더 기울일 때 속을 따뜻하게 풀어주는 일등공신',
   },
   {
@@ -137,7 +137,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 6000,
     description: '살얼음 육수를 가득 띄워 속까지 얼얼하게 시원하고 상큼한 소면! 고기의 기름기를 한 번에 싹 씻어냅니다',
     tag: '별미추천 ★',
-    image: '/images/ice_somyeon_1789296386537.jpg',
+    image: '/images/ice_somyeon.jpg',
     pairingNote: '뜨거운 숯불 구이와 차가운 빙소면의 냉온 조합은 필수입니다.',
   },
   {
@@ -146,7 +146,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'side',
     price: 5000,
     description: '따끈하고 깊은 멸치 디포리 육수에 쫄깃한 소면을 말아낸 훈훈한 잔치국수 스타일',
-    image: '/images/warm_somyeon_1789296864000.jpg',
+    image: '/images/warm_somyeon.jpg',
     pairingNote: '쌀쌀한 밤 포차 감성을 제대로 채워주는 온기 가득 국수',
   },
   {
@@ -165,7 +165,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'side',
     price: 3000,
     description: '구수한 토종 콩 알갱이가 살아있는 진한 뚝배기 청국장 찌개 단품',
-    image: '/images/cheongguk_soolbap_1789296362889.jpg',
+    image: '/images/cheonggukjang.jpg',
   },
   {
     id: 'side-rice',
@@ -208,14 +208,6 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 4000,
     description: '톡 쏘는 탄산과 구수한 쌀 풍미',
     image: '/images/makgeolli_bowl_1789441900759.jpg',
-  },
-  {
-    id: 'drink-daepo',
-    name: '대포',
-    category: 'drink',
-    price: 5000,
-    description: '은은한 쌀 발효주 풍미의 포차 감성 전통주',
-    image: '/images/daepo_korean_wine_1789441996404.jpg',
   },
   {
     id: 'drink-cheongha',
@@ -306,10 +298,10 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
   },
   {
     id: 'gal-2',
-    title: '당일 엄선 특대형 왕꼼장어 신선도',
-    category: '신선 원육',
-    src: '/images/wang_kkomjangeo_user.jpg',
-    description: '살아 숨쉬는 듯한 탱탱한 윤기와 도톰한 두께를 자랑하는 명품 꼼장어 원육',
+    title: '노릇하게 구워진 특대형 왕 소금구이 꼼장어',
+    category: '대표 시그니처',
+    src: '/images/wang_salt_eel.jpg',
+    description: '도톰한 두께와 풍부한 육즙을 자랑하는 명품 왕 소금구이 꼼장어',
   },
   {
     id: 'gal-3',
@@ -320,9 +312,9 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
   },
   {
     id: 'gal-4',
-    title: '매콤달콤 특제 왕야채꼼장어 호일팬',
+    title: '매콤달콤 특제 왕야채꼼장어',
     category: '양념 요리',
-    src: '/images/spicy_seasoned_eel_1789293478358.jpg',
+    src: '/images/vegetable_eel.jpg',
     description: '풍성한 채소와 비법 양념으로 버무려져 지글지글 볶아내는 별미',
   },
   {

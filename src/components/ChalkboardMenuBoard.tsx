@@ -311,10 +311,6 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     {/* Right sub-col */}
                     <div className="space-y-2.5">
                       <div className="flex justify-between items-baseline border-b border-stone-850 pb-1.5">
-                        <span className="text-white font-bold">대 포</span>
-                        <span className="text-amber-400 font-black text-base">₩5,000</span>
-                      </div>
-                      <div className="flex justify-between items-baseline border-b border-stone-850 pb-1.5">
                         <span className="text-white font-bold">청 하</span>
                         <span className="text-amber-400 font-black text-base">₩5,000</span>
                       </div>
@@ -444,7 +440,7 @@ export const ChalkboardMenuBoard: React.FC = () => {
                     <div>공기밥 ₩1,000</div>
                     <div className="col-span-2 pt-2 border-t border-stone-800 flex flex-wrap gap-2 text-stone-300">
                       <span>소주/맥주/막걸리 ₩4,000</span>
-                      <span>대포/청하 ₩5,000</span>
+                      <span>청하 ₩5,000</span>
                       <span>복분자 ₩12,000</span>
                       <span>음료수 ₩2,000</span>
                     </div>
